@@ -22,6 +22,7 @@ import iconTravelCar from '../../assets/icon_travelcar_.png';
 import differential from '../../assets/diferencial.png';
 import cameraProfissional from '../../assets/camera-profissional.png';
 import Header from '../../Components/Header'
+import Footer from '../../Components/Footer';
 
 export default function Inicio () {
     const imagesCarousel1 = [
@@ -185,8 +186,9 @@ export default function Inicio () {
           </div>
         </div>
 
-
+      
       </Container>
+      <Footer />
       </div>
   );
 }
