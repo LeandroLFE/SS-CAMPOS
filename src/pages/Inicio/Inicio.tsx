@@ -172,15 +172,14 @@ export default function Inicio () {
         <div className="professional-camera">
           <div className="professional-camera-wrapper">
             <div className="professional-camera-information">
-              <h2 className="title-7">DIFERENCIAL DO NOSSO TRABALHO</h2>
+              <h2 className="title-7">AS FOTOS SÃO TIRADAS DE CÂMERA PROFISSIONAL?</h2>
               <br /><br />
-              <p>1- Nossos passeios são exclusivos com um guia para no máximo 4 pessoas.</p>
-              <p>2- Fazemos passeios nos nossos carros, assim da para dar a devida atenção para cada um (principalmente pelas fotos).</p>
-              <p>3- PREZAMOS PELA QUALIDADE E NÃO QUANTIDADE. </p>
-              <p>4- Queremos todos os clientes satisfeitos com o passeio e fotos. </p>
-              <p>5- estando conosco vocês não pagam o estacionamento de R$(20,00) do PARQUE AMANTIKIR.</p>
-              <p>6- Os guias são nativos da cidade e saberão explicar um pouco da história da mesma.</p>
-              <p>7- Indicamos e liberamos troca de roupas (caso queiram).</p>
+              <p>NÃO. Todas as fotos são tiradas do celular do próprio cliente.</p>
+              <br />
+              <p className="paragraph-bold">Por que?</p>
+              <p>Os parques do passeio cobram um valor a parte para estar fazendo ensaio fotográfico (câmera profissional) os valores ultrapassam 700 reais em cada local.</p>
+              <br />
+              <p>No entanto, se você deseja ter fotos tiradas com uma câmera profissional durante o passeio, é possível adquirir adicional diretamente com as empresas que oferecem esse serviço nos parques, dependendo exclusivamente da sua escolha e disponibilidade financeira. </p>
             </div>
             <img src={cameraProfissional} alt="Imagem de uma família em Campos do Jordão"/>
           </div>

@@ -170,13 +170,22 @@ export const Container = styled.div`
         display: flex;
     }
 
-    .differential-information {
-        width: 30%;
-        margin-left: 80px;
+    .differential-information,
+    .professional-camera-information {
+        width: 35%;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: left;
+    }
+
+    .differential-information {
+        margin-left: 80px;
+        text-align: left;
+    }
+
+    .professional-camera-information { 
+        margin-right: 80px;
+        text-align: right;
     }
 
     .differential-information h2 {
@@ -195,18 +204,18 @@ export const Container = styled.div`
         justify-content: flex-end; 
     }
 
-    .professional-camera-information {
-        width: 30%;
-        margin-right: 80px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: left;
-    }
-
     .professional-camera-wrapper img,
     .differential-wrapper img {
         width: 50%;
     }
 
+    .paragraph-bold {
+        font-weight: bold;
+    }
+
+    .differential-information p,
+    .professional-camera-information p {
+        font-size: 18px; 
+        line-height: 32px;
+    }
 `;
