@@ -86,20 +86,14 @@ export const Container = styled.div`
     .carousel-text {
         white-space: pre-line;
     }
-
-    .services-images {
-        border: 2px solid red;
-        font-size: 0;
-        display: block;
-        justify-content: space-between;
-    }
     
-    .image-wrapper {
-        border: 2px solid green;  
+    .image-wrapper { 
         position: relative;
         display: inline-block;
-        padding: 0;
-        flex: 1;
+    }
+
+    .image-wrapper img { 
+        width: 296px;
     }
 
     .image-wrapper p {
