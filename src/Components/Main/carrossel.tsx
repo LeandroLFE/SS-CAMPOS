@@ -3,6 +3,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import StyledSlider from 'react-slick';
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
+import '../../pages/Inicio/style';
 
 type CarouselProps = {
     images: string[];
