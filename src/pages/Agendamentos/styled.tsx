@@ -12,7 +12,7 @@ export const Container = styled.div`
 
     .campos_schedules {
         width: 100vw;
-        heigth: 100vh;
+        height: 100vh;
         display: relative;
     }
 
@@ -33,9 +33,9 @@ export const Container = styled.div`
         background: #FFCC29; 
         text-transform: uppercase;
         font-weight: 550;
-        font-size: 14px;
+        font-size: 0.97vw;
         border-radius: 50px;
-        padding: 10px 15px;
+        padding: 0.69vw 1.67vh;
     }
 
     .title-1 {

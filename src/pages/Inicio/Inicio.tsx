@@ -1,6 +1,6 @@
 import campos_home from '../../assets/campos_home.png';
 import { Container } from './style';
-import { Carousel } from '../../Components/Main/carrossel';
+import Carousel  from '../../Components/Main/carrossel';
 import amantikir from '../../assets/Amantikir.png';
 import duchadeprata from '../../assets/Ducha-de-prata.png';
 import mirantedoscastelos from '../../assets/Mirante-dos-castelos.png';
@@ -47,21 +47,21 @@ export default function Inicio () {
 
     const textsCarousel1 = [
       'Parque Amantikir',
-      'Ducha de\nPrata',
+      'Ducha de Prata',
       'Mirante dos Castelos',
-      'Pico do\nItapeva',
-      'Vila\nHolandesa',
+      'Pico do Itapeva',
+      'Vila Holandesa',
       'Fábrica de Chocolate',
     ];
 
     const textsCarousel2 = [
       'Sans Souci Bistrô',
-      'Linha do\nTrem',
-      'Cabine\nInglesa',
+      'Linha do Trem',
+      'Cabine Inglesa',
       'Ponte do Guarda Chuva',
       'Mirante dos Castelos',
-      'Pico do\nItapeva',
-      'Vila\nHolandesa',
+      'Pico do Itapeva',
+      'Vila Holandesa',
       'Fábrica de Chocolate',
     ];
 

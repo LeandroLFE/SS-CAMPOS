@@ -1,18 +1,25 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-    width: 100vw;
-    position: absolute;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
 
     .header {
         display: flex;
         align-items: center;
-        justify-content: center;
+        gap: 20px;
+        margin-left: 20px;
     }
     .logo {
-        width: 209px;
-        margin: 14px 38.7vw 14px 14px;
+        width: 30%;
+        max-width: 209px;
+        margin: 1%;
     }
 
     button {
@@ -20,31 +27,34 @@ export const Container = styled.div`
         border: none;
         background-color: rgba(0, 0, 0, 0);
         cursor: pointer;
-        font-size: 13.6px;
-        margin-top: 14px;
+        font-size: 1vw; 
     }
 
     #button-1 {
         color: #FFCC29;  
-        margin-right: 11vw;
+        margin-left: 34%;
+        margin-right: 11%;
     }
 
     #button-2 {
-        margin-right: 9.8vw;
+        margin-right: 9.8%;
     }
 
     .icon {
-        margin-top: 6px;
-        margin-right: 20px;
-        width: 25px;
+        margin-top: 1%;
+        margin-right: 0.2%;
         cursor: pointer;
     }
 
+    #wpp {
+        width: 1.4%;
+    }
+
     #insta {
-        width: 30px;
+        width: 1.6%;
     }
 
     #gmail {
-        width: 33px;
+        width: 2%;
     }
 `;

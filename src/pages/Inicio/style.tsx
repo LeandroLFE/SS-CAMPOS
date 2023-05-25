@@ -7,43 +7,48 @@ export const Container = styled.div`
     h2 {
         text-transform: uppercase;
         color: #FFCC29; 
-        font-size: 35px;
+        font-size: 2.43vw; 
     }
 
     .campos_home {
-        width: 100vw;
-        heigth: 100vh;
-        display: relative;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        object-position: center;
+        position: relative; /* adiciona um contexto para os elementos filhos */
     }
 
     .principal-text {
-        display: absolute;
-        margin-top: -608px;
-        margin-left: 63px;
-        font-size: 50px;
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        transform: translateY(-50%);
+        font-size: 3.5vw;
         font-weight: 550;
-        line-height: 60px;
+        line-height: 4vw;
         text-shadow: 1px 1px 12px #000000;
     }
 
     .more-information {
-        margin-top: 20px;
-        margin-left: 63px;
+        position: absolute;
+        top: 62%;
+        left: 5%;
         color: #000000;
-        background: #FFCC29; 
+        background: #FFCC29;
         text-transform: uppercase;
         font-weight: 550;
-        font-size: 14px;
+        font-size: 1vw;
         border-radius: 50px;
-        padding: 10px 15px;
+        padding: 0.69vw 1.67vh;
+        cursor: pointer;
     }
 
     .title-1 {
-        margin-top: 380px;
         text-align: center;
     }
 
     .paragraph-description {
+        font-size: 1.1vw;
         width: 62%;
         margin-left: 19%;
         text-align: justify;
@@ -51,40 +56,22 @@ export const Container = styled.div`
 
     .first-road-map,
     .second-road-map {
-        width: 75vw;
+        width: 85vw;
         margin: auto;
+        padding: 0 70px;
     }
 
     .title-2, 
     .title-3,
     .title-4,
     .title-5 {
-        margin-top: 120px;
+        margin-top: 9%;
         text-align: center;
     }
 
     .information-paragraph {
+        font-size: 1.1vw;
         text-align: center;
-    }
-
-    .carousel-item {
-        position: relative;
-    }
-    
-    .caption {
-        position: absolute;
-        bottom: 20px;
-        left: -10px;
-        color: white;
-        padding: 10px 20px;
-        font-size: 33px;
-        font-weight: 550;
-        line-height: 40px;
-        text-shadow: 1px 1px 12px #000000;
-    }
-
-    .carousel-text {
-        white-space: pre-line;
     }
     
     .image-wrapper { 
@@ -182,7 +169,8 @@ export const Container = styled.div`
         text-align: right;
     }
 
-    .differential-information h2 {
+    .title-6,
+    .title-7 {
         line-height: 40px;
     }
 
@@ -209,7 +197,13 @@ export const Container = styled.div`
 
     .differential-information p,
     .professional-camera-information p {
-        font-size: 18px; 
-        line-height: 32px;
+        font-size: 1.1vw;
+        line-height: 2.2vw;
+    }
+
+
+    @media (max-width: 768px) {
+        /* Estilos para telas menores */
+        ...
     }
 `;
