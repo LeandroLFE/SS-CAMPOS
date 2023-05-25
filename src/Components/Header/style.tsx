@@ -17,44 +17,56 @@ export const Container = styled.div`
         margin-left: 20px;
     }
     .logo {
-        width: 30%;
-        max-width: 209px;
-        margin: 1%;
+        width: 209px;
+        margin: 14px 38.7vw 14px 14px;
     }
 
-    button {
+    .button {
         text-transform: uppercase;
         border: none;
         background-color: rgba(0, 0, 0, 0);
         cursor: pointer;
-        font-size: 1vw; 
+        font-size: 13.6px;
+        margin-top: 14px;
+        font-weight: 600;
     }
 
-    #button-1 {
-        color: #FFCC29;  
-        margin-left: 34%;
-        margin-right: 11%;
+    .button:hover {
+        color: #FFCC29;
+    }
+
+    #button-1.active {
+        color: #FFCC29;
+      }
+      
+      #button-2.active {
+        color: #FFCC29;
+      }
+
+    #button-1 {  
+        margin-right: 10vw;
     }
 
     #button-2 {
-        margin-right: 9.8%;
+        margin-right: 8vw;
     }
 
+    .button-header.active {
+        color: #FFCC29;
+      }
+
     .icon {
-        margin-top: 1%;
-        margin-right: 0.2%;
+        margin-top: 6px;
+        margin-right: 20px;
+    }
+    
+    .icon:hover {
+        color: #FFCC29;
         cursor: pointer;
     }
 
-    #wpp {
-        width: 1.4%;
-    }
-
-    #insta {
-        width: 1.6%;
-    }
-
-    #gmail {
-        width: 2%;
-    }
+    a {
+        color: inherit;
+        text-decoration: none;
+      }
 `;
