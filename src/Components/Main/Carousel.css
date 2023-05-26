@@ -1,38 +1,54 @@
 .carousel-container {
-    overflow: hidden;
+  border: 2px solid red;
+    position: relative;
     display: flex;
+    margin: auto;
+    width: 100%;
+    overflow: hidden;
+    justify-content: center;
     align-items: center;
-    justify-content: center
   }
 
   .items {
+    width: 100%;
     display: flex;
     transition: all 0.5s ease;
   }
   
   .item {
-    flex: 1;
-    margin-right: 0.5rem;
-    margin-left: 0.5rem;
     position: relative;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
   }
   
-  img {
+  .carousel-image {
     display: block;
     width: 100%;
     height: auto;
-    object-fit: cover;
+    transition: transform 0.5s ease-in-out;
   }
   
   .overlay {
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
     right: 0;
-    padding: 1rem;
-    background-color: rgba(0, 0, 0, 0.6);
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, pointer-events 0s linear 0.5s;
+  }
+
+  .text {
     color: white;
-    font-size: 1.2rem;
+    font-size: 2em;
+    font-weight: bold;
     text-align: center;
   }
 

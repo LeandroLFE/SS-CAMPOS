@@ -1,5 +1,6 @@
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './Carousel.css';
@@ -9,66 +10,129 @@ interface Props {
   texts: string[];
 }
 
-function Item ({ image, text }: { image: string, text: string }) {
-  const [hovered, setHovered] = useState(false);
-    
+const Item = ({ image, text }: {image: string, text: string}) => {
   return (
-    <div 
-      className="item"
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-    >
-      <img src={image} alt={text} className="carousel-image" />
-      {hovered && (
-        <div className="overlay">
-          <p>{text}</p>
-        </div>
-      )}
+    <div className="item">
+      <img src={image} alt={text} />
+      <p>{text}</p>
     </div>
   );
 }
 
 export default function Carousel ({ images, texts }: Props) {
-  const slidesToShow = 4;
-  const infinite = true;
-
-  const [current, setCurrent] = useState(0);
-
- const prevSlide = () => {
-    const length = images.length;
-    setCurrent(
-      current === 0 ? (infinite ? length - slidesToShow : 0) : current - 1
-    );
+  const totalSlides = images.length; 
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 100,
+    slidesToShow: 4,
+    slidesToScroll: 1
   };
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const carouselRef = useRef<Slider>(null);
 
-  const nextSlide = () => {
-    const length = images.length;
-    setCurrent(
-      current === (infinite ? length - slidesToShow : length - 1)
-        ? 0
-        : current + 1
-    );
-  };
-
-  if (!Array.isArray(images) || images.length <= 0) {
-    return null;
+  const handleSlideChange = (index: number) => {
+    if (index === totalSlides - 1 && currentSlide === index - settings.slidesToShow + 1) {
+      setCurrentSlide(0); // retorna ao primeiro slide
+    } else {
+      setCurrentSlide(index); // atualiza o slide normalmente
+    }
   }
 
   return (
     <div className="carousel-container">
       <div className="arrow">
-        <FaChevronLeft className="left-arrow" onClick={prevSlide} />
+      <FaChevronLeft className="left-arrow" onClick={() => carouselRef.current?.slickPrev()} />
       </div>
+      <Slider {...settings} beforeChange={(_, nextSlide) => handleSlideChange(nextSlide)} ref={carouselRef}></Slider>
       <div className="items">
       {images.map((image, index) =>
-          index >= current && index < current + slidesToShow ? (
+          index >= currentSlide && index < currentSlide + settings.slidesToShow ? (
             <Item key={index} image={image} text={texts[index]} />
           ) : null
       )}
       </div>
       <div className="arrow">
-        <FaChevronRight className="right-arrow" onClick={nextSlide} />
+        <FaChevronRight className="right-arrow" onClick={() => carouselRef.current?.slickNext()} />
       </div>
     </div>
   );
 }
+
+
+
+/*import { useState, useRef } from 'react';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import './Carousel.css';
+
+interface Props {
+  images: string[];
+  texts: string[];
+}
+
+export default function Carousel ({ images, texts }: Props) {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 100,
+    slidesToShow: 4,
+    slidesToScroll: 1
+  };
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const carouselRef = useRef<Slider>(null);
+
+  const handleSlideChange = (index: number) => {
+    setCurrentSlide(index);
+  }
+
+  return (
+    <div className="carousel-container">
+      <div className="arrow">
+        <FaChevronLeft className="left-arrow" onClick={() => carouselRef.current?.slickPrev()} />
+      </div>
+      <Slider {...settings} beforeChange={(_, nextSlide) => handleSlideChange(nextSlide)} ref={carouselRef}></Slider>
+      <div className="items">
+        {images.map((image, index) => (
+          <div
+            className="item"
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              height: "100%",
+              width: "100%",
+              marginRight: "10px",
+              marginLeft: "10px",
+              transform: currentSlide === index ? `scale(1.2)` : `none`,
+              transition: "transform 0.3s ease-in-out",
+            }}
+          >
+            <img
+              src={image}
+              alt={texts[index]}
+              className="carousel-image"
+              style={{ transform: `scale(${index === currentSlide ? 1.2 : 1})` }}
+            />
+            <div
+              className="overlay"
+              style={{
+                opacity: index === currentSlide ? 1 : 0.5,
+                pointerEvents: index === currentSlide ? 'auto' : 'none',
+              }}
+            >
+              <p className="text">{texts[index]}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className="arrow">
+        <FaChevronRight className="right-arrow" onClick={() => carouselRef.current?.slickNext()} />
+      </div>
+    </div>
+  );
+}*/
