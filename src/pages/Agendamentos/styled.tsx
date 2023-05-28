@@ -92,7 +92,7 @@ export const Container = styled.div`
         flex-direction: column;
         align-items: center;
         height: 100vh;
-        margin-top: 2%;
+        margin-top: 2rem;
       }
 
       .top-comments {
@@ -101,17 +101,17 @@ export const Container = styled.div`
 
       .bottom-comments {
         display: flex;
-        margin-top: -9%;
+        margin-top: -23vh;
       }
 
       .right-box {
-        margin-top: 10%;
+        margin-top: 15vh;
       }
       
       .comment-box {
-        width: 300px;   
-        height: 320px;
-        padding: 50px;
+        width: 20vw;   
+        height: 40vh;
+        padding: 5% 2vw;
       }
 
       .profile-info {
