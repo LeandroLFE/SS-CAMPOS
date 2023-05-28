@@ -66,10 +66,43 @@ export const Container = styled.div`
         cursor: pointer;
     }
 
+    .menu-icon {
+        color: #ffffff;
+        cursor: pointer;
+        /* Add any additional styles as needed */
+    }
+
     a {
         color: inherit;
         text-decoration: none;
     }
+
+    .menu {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 200px; /* Adjust the width as needed */
+        background-color: black;
+        padding: 10px;
+        /* Add any additional styles as needed */
+    }
+
+    .menu-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    /* Hide the menu initially */
+    .menu {
+        display: none;
+    }
+
+    /* Show the menu when it's open */
+    .menu.open {
+        display: block;
+    }
+
 
     /* Smartphones */
     @media (min-width: 375px) and (max-width: 480px) {
@@ -82,7 +115,9 @@ export const Container = styled.div`
 
     /* Tablets */
     @media (min-width: 768px) and (max-width: 1023px) {
-    /* Estilos para tablets */
+        .icon {
+            display: none;
+        }
     }
 
     /* Laptops e desktops menores */
