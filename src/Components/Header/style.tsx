@@ -44,7 +44,7 @@ export const Container = styled.div`
     }
 
     #button-1 {  
-        margin-right: 10vw;
+        margin-right: 8vw;
     }
 
     #button-2 {
@@ -69,7 +69,8 @@ export const Container = styled.div`
     .menu-icon {
         color: #ffffff;
         cursor: pointer;
-        /* Add any additional styles as needed */
+        margin: 6.5vw 3vw 3vw 0;
+        background-color: rgba(0, 0, 0, 0);
     }
 
     a {
@@ -79,12 +80,18 @@ export const Container = styled.div`
 
     .menu {
         position: absolute;
-        top: 100%;
+        top: 0;
         right: 0;
-        width: 200px; /* Adjust the width as needed */
-        background-color: black;
+        left: 0;
+        height: 100vh;
+        background-color: rgba(0, 0, 0);
         padding: 10px;
         /* Add any additional styles as needed */
+    }
+
+    .logo-menu {
+        width: 50%;
+        margin: 12vw 0 0 9vw;
     }
 
     .menu-item {
@@ -103,10 +110,25 @@ export const Container = styled.div`
         display: block;
     }
 
+    .close-menu-button {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0);
+        top: 5vh;
+        right: 10vw;
+        z-index: 2;
+    }
 
     /* Smartphones */
     @media (min-width: 375px) and (max-width: 480px) {
-        
+        .logo {
+            width: 30%;
+            margin: 3vw 20vw 3vw 2vw;
+        }
+
+        .button {
+            font-size: 2vw;
+            margin-top: 3vw;
+        }
     }
 
     @media (min-width: 481px) and (max-width: 767px) {
