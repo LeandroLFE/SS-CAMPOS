@@ -17,10 +17,10 @@ export const Container = styled.div`
     }
 
     .logo {
-        width: 309px;
-        margin: 40px 50px 14px 0px;
+        width: 20vw;
+        margin: 2vw 3vw 1vw 0;
         border-right: 1px solid white;
-        padding: 40px 50px 40px 0;
+        padding: 2.5vw 3vw 2.5vw 0;
     }
 
     .paginas {
@@ -28,52 +28,100 @@ export const Container = styled.div`
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        padding-top: 20px;
-        font-size: 15px;
+        padding-top: 1.5vw;
+        font-size: 1vw;
     }
 
     .title-paginas {
         font-weight: bold;
     }
 
-    button {
+    
+    .button {
         text-transform: uppercase;
         border: none;
         background-color: rgba(0, 0, 0, 0);
         cursor: pointer;
-        margin-top: 14px;
+        font-size: 0.9vw;
+        margin-top: 0.8vw;
+        font-weight: 600;
+    }
+
+    .button:hover {
+        color: #FFCC29;
+    }
+
+    #button-1.active {
+        color: #FFCC29;
+      }
+      
+    #button-2.active {
+        color: #FFCC29;
+    }
+
+    #button-1 {  
+        margin-right: 10vw;
+    }
+
+    #button-2 {
+        margin-right: 8vw;
+    }
+
+    .button-header.active {
+        color: #FFCC29;
     }
 
     .devs {
-        margin-top: 30px;
+        margin-top: 2vw;
     }
 
     .contact {
-        margin: 68px 0 0 200px;
+        margin: 3.5vw 0 0 15vw;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
         align-items: flex-end;
     }
 
+    .icons-warp {
+        display: flex;
+    }
+
     #wpp {
-        margin-right: 20px;
-        width: 25px;
+        margin-right: 1vw;
+        width: 2vw;
         cursor: pointer;
     }
 
     #insta {
-        width: 28px;
+        width: 2vw;
         cursor: pointer;
     }
 
     .email {
-        margin-top: 28px;
+        margin-top: 2vw;
+        font-size: 1vw;
     }
 
     .amarela {
         width: 100vw;
-        height: 20px;
+        height: 1.5vw;
         background: #FFCC29;  
     }
+
+    .icon {
+        width: 50%;
+        margin-top: 1vw;
+        margin-right: 1.5vw;
+    }
+    
+    .icon:hover {
+        color: #FFCC29;
+        cursor: pointer;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+      }
 `;

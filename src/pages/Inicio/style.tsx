@@ -80,12 +80,22 @@ export const Container = styled.div`
     }
     
     .image-wrapper { 
+        cursor: pointer;
         position: relative;
         display: inline-block;
     }
 
+    .image-wrapper:hover img { 
+        filter: brightness(0.5);
+    }
+
+    .image-wrapper:hover p { 
+        font-size: 2.4vw;
+        text-shadow: 2vw 2vw 1vw #000000;
+    }
+
     .image-wrapper img { 
-        width: 296px;
+        width: 20vw;
     }
 
     .image-wrapper p {
@@ -95,10 +105,10 @@ export const Container = styled.div`
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        font-size: 30px;
+        font-size: 2vw;
         font-weight: 550;
-        line-height: 40px;
-        text-shadow: 1px 1px 12px #000000;
+        line-height: 2.5vw;
+        text-shadow: 1vw 1vw 1vw #000000;
     }
 
     .services {
@@ -112,24 +122,37 @@ export const Container = styled.div`
     }
 
     .icon-wrapper {
-        border: 4px solid #FFCC29;
+        cursor: pointer;
+        border: 0.3vw solid #FFCC29;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        padding: 50px 70px;
-        margin: 0 30px;
+        padding: 4vw 5vw;
+        margin: 0 1.5%;
         width: 8%;
+        transition: transform 0.3s;
+    }
+
+    .icon-wrapper:hover {
+        transform: scale(1.1);
     }
 
     .icon-wrapper img {
-        width: 100px;
-        height: 90px;
-        margin-bottom: 30px;
+        width: 7vw;
+        height: 6.5vw;
+        margin-bottom: 20%;
     }
 
     .icon-wrapper p {
         text-align: center;
+        font-size: 1vw;
+        text-decoration: none;
+    }
+
+    .icon-wrapper a {
+        text-decoration: none;
+        color: white;
     }
 
     .button-budget {
@@ -138,18 +161,25 @@ export const Container = styled.div`
     }
 
     .budget {
-        font-size: 19px;
-        padding: 12px 48px;
+        text-transform: uppercase;
+        font-size: 1vw;
+        padding: 0.8% 2%;
         background: #FFCC29;
         color: black;
         font-weight: bold;
-        border-radius: 12px;
-        margin-top: 50px;
+        border-radius: 50px;
+        margin-top: 3.4%;
         cursor: pointer;
+        text-decoration: none;
+    }
+
+    .budget:hover {
+        color: #FFCC29;
+        background-color: rgba(255, 204, 41, 0.4);
     }
 
     .differential {
-        margin-top: 120px;
+        margin-top: 9%;
     }
 
     .differential-wrapper, .professional-camera-wrapper {
@@ -165,24 +195,24 @@ export const Container = styled.div`
     }
 
     .differential-information {
-        margin-left: 80px;
+        margin-left: 5%;
         text-align: left;
     }
 
     .professional-camera-information { 
-        margin-right: 80px;
+        margin-right: 5%;
         text-align: right;
     }
 
     .title-6,
     .title-7 {
-        line-height: 40px;
+        line-height: 3vw;
     }
 
     .professional-camera {
         display: flex; 
         justify-content: flex-end; 
-        padding: 50px 0;
+        padding: 5% 0;
     }
 
     .professional-camera-wrapper {

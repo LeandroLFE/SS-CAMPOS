@@ -96,20 +96,28 @@ export default function Inicio () {
           <br /><br />
           <div className="services-group">
             <div className="icon-wrapper">
-              <img src={iconTravelCar} alt="ícone carro"/>
-              <p>Carro exclusivo</p>
+              <a href="https://api.whatsapp.com/message/IJB2DRZOVPY5B1?autoload=1&app_absent=0" target="_blank">
+                <img src={iconTravelCar} alt="ícone carro"/>
+                <p>Carro exclusivo</p>
+              </a>
             </div>
             <div className="icon-wrapper">
-              <img src={iconMap} alt="ícone mapa"/>
-              <p>Guia particular</p>
+              <a href="https://api.whatsapp.com/message/IJB2DRZOVPY5B1?autoload=1&app_absent=0" target="_blank">
+                <img src={iconMap} alt="ícone mapa"/>
+                <p>Guia particular</p>
+              </a>
             </div>
             <div className="icon-wrapper">
-              <img src={iconCalendar} alt="ícone calendario"/>
-              <p>Vagas Limitadas</p>
+              <a href="https://api.whatsapp.com/message/IJB2DRZOVPY5B1?autoload=1&app_absent=0" target="_blank">
+                <img src={iconCalendar} alt="ícone calendario"/>
+                <p>Vagas Limitadas</p>
+              </a>
             </div>
           </div>
           <div className="button-budget">
-            <button className="budget">Fazer orçamento</button>
+            <a href="https://api.whatsapp.com/message/IJB2DRZOVPY5B1?autoload=1&app_absent=0" className="budget" target="_blank">
+              Fazer orçamento
+            </a>
           </div>
         </div>
 
