@@ -12,9 +12,11 @@ export const Container = styled.div`
     }
 
     .campos_schedules {
-        width: 100vw;
-        height: 100vh;
-        display: relative;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        object-position: center;
+        position: relative; /* adiciona um contexto para os elementos filhos */
     }
 
     .principal-text {

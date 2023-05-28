@@ -37,8 +37,8 @@ export const Container = styled.div`
 
     #button-1.active {
         color: #FFCC29;
-      }
-      
+    }
+    
     #button-2.active {
         color: #FFCC29;
     }
@@ -69,5 +69,5 @@ export const Container = styled.div`
     a {
         color: inherit;
         text-decoration: none;
-      }
+    }
 `;
