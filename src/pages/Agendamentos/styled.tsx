@@ -52,6 +52,7 @@ export const Container = styled.div`
     }
 
     .paragraph-description {
+        font-size: 1.1vw;
         width: 62%;
         margin-left: 19%;
         text-align: justify;
@@ -65,7 +66,7 @@ export const Container = styled.div`
     .schedule {
         font-size: 1vw;
         text-transform: uppercase;
-        padding: 12px 30px;
+        padding: 1% 3%;
         background: #FFCC29;
         color: black;
         font-weight: bold;
@@ -89,7 +90,7 @@ export const Container = styled.div`
         flex-direction: column;
         align-items: center;
         height: 100vh;
-        margin-top: 25px;
+        margin-top: 2%;
       }
 
       .top-comments {
@@ -98,15 +99,15 @@ export const Container = styled.div`
 
       .bottom-comments {
         display: flex;
-        margin-top: -120px;
+        margin-top: -9%;
       }
 
       .right-box {
-        margin-top: 100px
+        margin-top: 10%;
       }
       
       .comment-box {
-        width: 300px;
+        width: 300px;   
         height: 320px;
         padding: 50px;
       }
@@ -118,26 +119,32 @@ export const Container = styled.div`
       }
 
       .comment {
+        font-size: 1.07vw;
         text-align: center;
         font-style: italic;
       }
 
       .quote-icon-left {
         color: #FFCC29;
-        font-size: 30px;
-        margin: 10px;
-        margin-left: -10px;
+        font-size: 2.2vw;
+        margin: 2%;
+        margin-left: -10%;
         display: inline-block;
       }
 
       .quote-icon-right {
         color: #FFCC29;
-        font-size: 30px;
-        margin: 10px;
-        margin-left: 270px;
+        font-size: 2.2vw;
+        margin: 2%;
+        margin-left: 95%;
       }
 
       .profile-picture {
-        margin-right: 20px
+        width: 20%;
+        margin-right: 6%;
+      }
+
+      .profile-info p {
+        font-size: 1.07vw;
       }
 `;
