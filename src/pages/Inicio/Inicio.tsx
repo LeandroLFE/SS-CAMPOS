@@ -1,16 +1,8 @@
+import { useRef } from 'react';
 import campos_home from '../../assets/campos_home.png';
 import { Container } from './style';
-import Carousel  from '../../Components/Main/carrossel';
-import amantikir from '../../assets/Amantikir.png';
-import duchadeprata from '../../assets/Ducha-de-prata.png';
-import mirantedoscastelos from '../../assets/Mirante-dos-castelos.png';
-import picodoitapeva from '../../assets/Pico-do-itapeva.png';
-import Vilaholandesa from '../../assets/Vila-holandesa.png';
-import fabricadechocolate from '../../assets/fabrica-de-chocolate.png';
-import SansSouciBistro from '../../assets/Sans-Souci-Bistro.png';
-import Linhadotrem from '../../assets/Linha-do-trem.png';
-import CabineInglesa from '../../assets/Cabine-Inglesa.png';
-import PontedoGuardaChuva from '../../assets/Ponte-do-Guarda-Chuva.png';
+import Carousel1 from '../../Components/Main/first-carrossel';
+import Carousel2 from '../../Components/Main/second-carrossel';
 import transfer from '../../assets/transfer.png';
 import aparecida from '../../assets/Aparecida.png';
 import vinicola from '../../assets/Vinicola.png';
@@ -23,47 +15,14 @@ import differential from '../../assets/diferencial.png';
 import cameraProfissional from '../../assets/camera-profissional.png';
 import Header from '../../Components/Header'
 import Footer from '../../Components/Footer';
+import { FiChevronRight } from 'react-icons/fi';
 
 export default function Inicio () {
-    const imagesCarousel1 = [
-      amantikir,
-      duchadeprata,
-      mirantedoscastelos,
-      picodoitapeva,
-      Vilaholandesa,
-      fabricadechocolate
-    ];
+  const sectionButtonRef = useRef<HTMLHeadingElement>(null);
 
-    const imagesCarousel2 = [
-      SansSouciBistro,
-      Linhadotrem,
-      CabineInglesa,
-      PontedoGuardaChuva,
-      mirantedoscastelos,
-      picodoitapeva,
-      Vilaholandesa,
-      fabricadechocolate
-    ];
-
-    const textsCarousel1 = [
-      'Parque Amantikir',
-      'Ducha de Prata',
-      'Mirante dos Castelos',
-      'Pico do Itapeva',
-      'Vila Holandesa',
-      'Fábrica de Chocolate',
-    ];
-
-    const textsCarousel2 = [
-      'Sans Souci Bistrô',
-      'Linha do Trem',
-      'Cabine Inglesa',
-      'Ponte do Guarda Chuva',
-      'Mirante dos Castelos',
-      'Pico do Itapeva',
-      'Vila Holandesa',
-      'Fábrica de Chocolate',
-    ];
+  const handleButtonClick = () => {
+    sectionButtonRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };  
 
     return (
       <div>
@@ -72,11 +31,13 @@ export default function Inicio () {
         <div className="top-main">
           <img src={campos_home} alt="Entrada de Campos do Jordão" className="campos_home"/>
           <h1 className="principal-text">Conheça o melhor de Campos do <br />Jordão com a nossa equipe!</h1>
-          <button className="more-information" id='button-3'>Leia Mais &gt;</button>
+          <button className="more-information" onClick={handleButtonClick}>
+          Leia Mais <FiChevronRight style={{ verticalAlign: "middle" }} />
+        </button>
         </div>
 
         <div className="description">
-          <h2 className="title-1">O que oferecemos</h2>
+          <h2 className="title-1" ref={sectionButtonRef}>O que oferecemos</h2>
           <br />
           <div className="paragraph-description">
             <p>Oferecemos a vocês uma experiência única ao explorar os principais pontos turísticos de Campos do Jordão acompanhados por nossa equipe altamente qualificada. Nossos guias particulares irão proporcionar um passeio diferenciado, explicando detalhadamente sobre cada local visitado.</p>
@@ -93,14 +54,14 @@ export default function Inicio () {
           <h2 className="title-2">Roteiro 1</h2>
           <p className="information-paragraph">Duração de 6h com parada para almoço.</p>
           <br /><br />
-          <Carousel images={imagesCarousel1} texts={textsCarousel1} />
+          <Carousel1/>
         </div>
 
         <div className="second-road-map">
           <h2 className="title-3">Roteiro 2</h2>
           <p className="information-paragraph">Duração de 3h.</p>
           <br /><br />
-          <Carousel images={imagesCarousel2} texts={textsCarousel2} />
+          <Carousel2/>
         </div>
 
         <div className="other-services">

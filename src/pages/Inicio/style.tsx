@@ -43,6 +43,11 @@ export const Container = styled.div`
         cursor: pointer;
     }
 
+    .more-information:hover {
+        color: #FFCC29;
+        background-color: rgba(255, 204, 41, 0.4);
+    }
+
     .title-1 {
         text-align: center;
     }
