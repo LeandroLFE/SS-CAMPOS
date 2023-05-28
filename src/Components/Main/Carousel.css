@@ -36,7 +36,7 @@
   right: 0;
   left: 0;
   padding: 2%;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.4);
   color: #fff;
   text-align: center;
 }
@@ -54,7 +54,7 @@
 }
 
 .slide-content .slide-description {
-  font-size: 0.95vw;
+  font-size: 1vw;
   padding-inline: 5.5%;
 }
 

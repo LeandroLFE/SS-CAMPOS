@@ -32,7 +32,7 @@ const slides = [
   { 
     id: 4, 
     text: 'Pico do Itapeva', 
-    description: 'O Pico do Itapeva é um local privilegiado que proporciona uma vista espetacular das montanhas da Serra da Mantiqueira e da região circundante.', 
+    description: 'O Mirante do Pico do Itapeva é um local privilegiado que proporciona uma vista espetacular das montanhas da Serra da Mantiqueira e da região circundante.', 
     image: picodoitapeva 
   },
 
