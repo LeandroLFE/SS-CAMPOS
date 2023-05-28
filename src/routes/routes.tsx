@@ -1,4 +1,6 @@
-import { Route, Routes, BrowserRouter as BrowserRouter } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom"; // Importe o BrowserRouter separadamente
+
 import Inicio from '../pages/Inicio/Inicio';
 import Agendamentos from '../pages/Agendamentos/Agendamentos';
 
@@ -12,5 +14,5 @@ export function RoutesApp() {
                 <Route path="/agendamentos" element={<Agendamentos />} />
             </Routes>
         </BrowserRouter>
-    )
+    );
 }
