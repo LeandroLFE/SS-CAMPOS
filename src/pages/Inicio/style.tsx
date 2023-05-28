@@ -236,9 +236,32 @@ export const Container = styled.div`
         line-height: 2.2vw;
     }
 
+    /* Smartphones */
+    @media (min-width: 375px) and (max-width: 480px) {
+    
+    }
 
-    @media (max-width: 768px) {
-        /* Estilos para telas menores */
-        ...
+    @media (min-width: 481px) and (max-width: 767px) {
+
+    }
+
+    /* Tablets */
+    @media (min-width: 768px) and (max-width: 1023px) {
+    /* Estilos para tablets */
+    }
+
+    /* Laptops e desktops menores */
+    @media (min-width: 1024px) and (max-width: 1279px) {
+    /* Estilos para laptops e desktops menores */
+    }
+
+    /* Laptops e desktops maiores */
+    @media (min-width: 1280px) and (max-width: 1439px) {
+    /* Estilos para laptops e desktops maiores */
+    }
+
+    /* Laptops e desktops ainda maiores */
+    @media (min-width: 1440px) and (max-width: 1919px) {
+    /* Estilos para laptops e desktops ainda maiores */
     }
 `;
