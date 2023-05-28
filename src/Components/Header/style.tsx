@@ -11,15 +11,14 @@ export const Container = styled.div`
         align-items: center;
         justify-content: center;
         width: 100%;
-        height: 100px;
         margin-left: auto;
         margin-right: auto;
     }
 
 
     .logo {
-        width: 209px;
-        margin: 14px 38.7vw 14px 14px;
+        width: 13%;
+        margin: 1vw 38.7vw 1vw 1vw;
     }
 
     .button {
@@ -27,8 +26,8 @@ export const Container = styled.div`
         border: none;
         background-color: rgba(0, 0, 0, 0);
         cursor: pointer;
-        font-size: 13.6px;
-        margin-top: 14px;
+        font-size: 1vw;
+        margin-top: 1vw;
         font-weight: 600;
     }
 
@@ -57,8 +56,9 @@ export const Container = styled.div`
       }
 
     .icon {
-        margin-top: 6px;
-        margin-right: 20px;
+        width: 50%;
+        margin-top: 1vw;
+        margin-right: 1.5vw;
     }
     
     .icon:hover {
