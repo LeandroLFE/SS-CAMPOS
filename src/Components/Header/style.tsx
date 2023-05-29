@@ -69,7 +69,8 @@ export const Container = styled.div`
     .menu-icon {
         color: #ffffff;
         cursor: pointer;
-        margin: 6.5vw 3vw 3vw 0;
+        margin: 1.4vw 2vw 0 0;
+        font-size: 0.1px;
         background-color: rgba(0, 0, 0, 0);
     }
 
@@ -79,30 +80,42 @@ export const Container = styled.div`
     }
 
     .menu {
+        border-top: 1.5px solid rgba(183, 183, 183, 0.6);
         position: absolute;
-        top: 0;
+        top: 8.5vh;
         right: 0;
         left: 0;
-        height: 100vh;
-        background-color: rgba(0, 0, 0);
+        height: 38vh;
+        background-color: rgba(0, 0, 0, 0.5);
         padding: 10px;
-        /* Add any additional styles as needed */
+        display: none;
+        
+        
     }
 
-    .logo-menu {
-        width: 50%;
-        margin: 12vw 0 0 9vw;
+    .menu-options {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end; /* Adicione esta linha para alinhar os botões à direita */
+        margin-bottom: 10px;
+        padding-inline: 8vw;
+        padding-top: 2vw;
+        padding-bottom: 2vw;
+    }
+
+    .contact-icons {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end; /* Adicione esta linha para alinhar os botões à direita */
+        margin-bottom: 10px;
+        padding-inline: 8vw;
+        padding-top: 2vw;
+        padding-bottom: 2vw;
+
     }
 
     .menu-item {
-        display: flex;
-        align-items: center;
-        margin-bottom: 10px;
-    }
 
-    /* Hide the menu initially */
-    .menu {
-        display: none;
     }
 
     /* Show the menu when it's open */
@@ -110,24 +123,39 @@ export const Container = styled.div`
         display: block;
     }
 
-    .close-menu-button {
-        position: absolute;
-        background-color: rgba(0, 0, 0, 0);
-        top: 5vh;
-        right: 10vw;
-        z-index: 2;
+    .button-menu-option {
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(0,0,0,0);
+        margin-top: 3vh;
+        text-transform: uppercase;
+        margin-left: auto; /* Adiciona margem à esquerda para empurrar para a direita */
     }
 
     /* Smartphones */
     @media (min-width: 375px) and (max-width: 480px) {
+        .header {
+            justify-content: space-between;
+            padding: 3vw;
+            background-color: rgba(0,0,0,0.5);
+        }
+
         .logo {
-            width: 30%;
-            margin: 3vw 20vw 3vw 2vw;
+            width: 38%;
+            margin: 0;
         }
 
         .button {
-            font-size: 2vw;
-            margin-top: 3vw;
+            font-size: 2.7vw;
+            margin-top: 2vw;
+        }
+
+        #button-1 {  
+          margin-right: 0;
+        }
+
+        #button-2 {
+            margin-right: 0;
         }
     }
 
