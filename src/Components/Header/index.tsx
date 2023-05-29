@@ -1,30 +1,15 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import logo from "../../assets/logo_horizontal.png";
 import { Container } from "./style";
 import { useLocation } from "react-router-dom";
-import { FaEllipsisV, FaWhatsapp, FaInstagram } from "react-icons/fa";
+import { FaWhatsapp, FaInstagram } from "react-icons/fa";
 import { GoMail } from "react-icons/go";
+import { AiOutlineMenu } from "react-icons/ai";
 
 const Header = () => {
   const location = useLocation();
+  const isMobileView = window.innerWidth <= 768;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 768);
-
-  const handleMenuToggle = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  useEffect(() => {
-    const handleWindowResize = () => {
-      setIsMobileView(window.innerWidth <= 768);
-    };
-
-    window.addEventListener("resize", handleWindowResize);
-
-    return () => {
-      window.removeEventListener("resize", handleWindowResize);
-    };
-  }, []);
 
   return (
     <Container>
@@ -53,28 +38,15 @@ const Header = () => {
           Agendamentos
         </button>
         {isMobileView ? (
-          <button
-            className={`menu-icon ${isMenuOpen ? "open" : ""}`}
-            onClick={handleMenuToggle}
-          >
-            {isMenuOpen ? (
-              <FaEllipsisV size={16} color="#FFFFFF" />
-            ) : (
-              <FaEllipsisV size={16} color="#FFFFFF" />
-            )}
-          </button>
+          <i className={`menu-icon ${isMenuOpen ? "open" : ""}`} onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            <AiOutlineMenu size={20} color="#FFFFFF" />
+          </i>
         ) : (
           <>
-            <a
-              href="https://api.whatsapp.com/message/IJB2DRZOVPY5B1?autoload=1&app_absent=0"
-              target="_blank"
-            >
+            <a href="https://api.whatsapp.com/message/IJB2DRZOVPY5B1?autoload=1&app_absent=0" target="_blank">
               <FaWhatsapp className="icon" size={29} />
             </a>
-            <a
-              href="https://www.instagram.com/sspasseiosemcampos/"
-              target="_blank"
-            >
+            <a href="https://www.instagram.com/sspasseiosemcampos/" target="_blank">
               <FaInstagram className="icon" size={28} />
             </a>
             <a href="mailto:SSpasseiosemcampos@gmail.com" target="_blank">
@@ -84,34 +56,24 @@ const Header = () => {
         )}
 
         {isMenuOpen && isMobileView && (
-          <div className={`menu ${isMenuOpen ? "open" : ""}`}>
-            <div className="menu-options">
-              <button className="button-menu-option">Roteiros</button>
-              <button className="button-menu-option">Outros Atendimentos</button>
-              <button className="button-menu-option">Serviços</button>
-              <button className="button-menu-option">Diferencial do nosso trabalho</button>
-              <button className="button-menu-option">Feedbacks</button>
+          <div className={`menu ${isMenuOpen ? 'open' : ''}`}>
+            {/* Menu content */}
+            <div className="menu-item">
+              <a href="https://api.whatsapp.com/message/IJB2DRZOVPY5B1?autoload=1&app_absent=0" target="_blank">
+                <FaWhatsapp className="icon" size={29} />
+              </a>
             </div>
-          
-            <div className="contact-icons">
-              <h5>Contato/Agendamento</h5>
-              <div className="menu-item">
-                <a href="https://api.whatsapp.com/message/IJB2DRZOVPY5B1?autoload=1&app_absent=0" target="_blank">
-                  <FaWhatsapp className="icon" size={29} />
-                </a>
-              </div>
-              <div className="menu-item">
-                <a href="https://www.instagram.com/sspasseiosemcampos/" target="_blank">
-                  <FaInstagram className="icon" size={28} />
-                </a>
-              </div>
-              <div className="menu-item">
-                <a href="mailto:SSpasseiosemcampos@gmail.com" target="_blank">
-                  <GoMail className="icon" size={32} />
-                </a>
-              </div>
+            <div className="menu-item">
+              <a href="https://www.instagram.com/sspasseiosemcampos/" target="_blank">
+                <FaInstagram className="icon" size={28} />
+              </a>
             </div>
-          </div> 
+            <div className="menu-item">
+              <a href="mailto:SSpasseiosemcampos@gmail.com" target="_blank">
+                <GoMail className="icon" size={32} />
+              </a>
+            </div>
+          </div>
         )}
       </div>
     </Container>

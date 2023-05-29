@@ -238,47 +238,7 @@ export const Container = styled.div`
 
     /* Smartphones */
     @media (min-width: 375px) and (max-width: 480px) {
-        .image_container {
-            width: 300vw;
-            height: auto;
-            margin: 0 auto;
-        }       
-        
-        .principal-text {
-            top: 65%;
-            left: 5%;
-            font-size: 8.8vw;
-            line-height: 12vw;
-            width: 85vw;
-        }
-
-        .more-information {
-            position: absolute;
-            top: 83%;
-            left: 5%;
-            font-weight: 600;
-            font-size: 4vw;
-        }
-
-        h2 {
-            text-transform: uppercase;
-            color: #FFCC29; 
-            font-size: 7vw; 
-        }
-
-        .paragraph-description {
-            font-size: 3.5vw;
-            width: 70%;
-            margin-left: 15%;
-            text-align: justify;
-        }
-
-        .first-road-map,
-        .second-road-map {
-            width: 10vw;
-            margin: auto;
-            padding: 0 70px;
-        }
+    
     }
 
     @media (min-width: 481px) and (max-width: 767px) {
