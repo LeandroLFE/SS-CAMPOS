@@ -14,56 +14,48 @@ const slides = [
   { 
     id: 1, 
     text: 'Sans Souci Bistrô', 
-    description: 'O Sans Souci Bistrô é um encantador refúgio gastronômico que combina a elegância francesa com a beleza da cidade. Com sua atmosfera acolhedora e pratos sofisticados.', 
     image: SansSouciBistro 
   },
 
   { 
     id: 2, 
-    text: 'Linha do Trem', 
-    description: 'A Linha do Trem em Campos do Jordão é uma pitoresca e charmosa ferrovia que percorre a Serra da Mantiqueira. Com paisagens deslumbrantes e um passeio tranquilo, a linha oferece aos visitantes uma viagem única, repleta de encantos naturais e históricos.', 
+    text: 'Linha do<br>Trem', 
     image: Linhadotrem 
   },
 
   { 
     id: 3, 
-    text: 'Cabine Inglesa', 
-    description: 'A Cabine Inglesa em Campos do Jordão é uma peculiar e nostálgica cabine telefônica vermelha que remete ao icônico símbolo britânico.', 
+    text: 'Cabine<br>Inglesa', 
     image: CabineInglesa 
   },
 
   { 
     id: 4, 
     text: 'Ponte do Guarda Chuva', 
-    description: 'A Ponte do Guarda Chuva é uma encantadora passarela suspensa que ganhou esse nome devido à sua peculiar decoração com inúmeros guarda-chuvas coloridos. ', 
     image: PontedoGuardaChuva 
   },
 
   { 
     id: 5, 
     text: 'Mirante dos Castelos', 
-    description: 'O Mirante dos Castelos é um ponto turístico famoso que oferece uma vista panorâmica deslumbrante da cidade e das montanhas ao redor.', 
     image: mirantedoscastelos 
   },
 
   { 
     id: 6, 
-    text: 'Pico do Itapeva', 
-    description: 'O Pico do Itapeva é um local privilegiado que proporciona uma vista espetacular das montanhas da Serra da Mantiqueira e da região circundante.', 
+    text: 'Pico do<br>Itapeva', 
     image: picodoitapeva 
   },
 
   { 
     id: 7, 
-    text: 'Vila Holandesa', 
-    description: 'A Vila Holandesa em Campos do Jordão é um charmoso complexo arquitetônico que remete à cultura e arquitetura típicas da Holanda, com casinhas coloridas, moinhos de vento e belos jardins.', 
+    text: 'Vila<br>Holandesa', 
     image: Vilaholandesa 
   },
 
   { 
     id: 8, 
     text: 'Fábrica de Chocolate', 
-    description: 'A Fábrica de Chocolate em Campos do Jordão é um paraíso para os amantes de chocolate, oferecendo deliciosas opções de doces, bombons e chocolates artesanais.', 
     image: fabricadechocolate 
   },
 ];
@@ -119,8 +111,10 @@ const Carousel2 = () => {
             <div key={slide.id} className={`slide ${isCurrent ? 'active' : ''}`}>
               <img src={slide.image} alt={`Slide ${slide.id}`} />
               <div className="slide-content">
-                <h2 className={`slide-title ${isCurrent ? 'active' : ''}`}>{slide.text}</h2>
-                <p className={`slide-description ${isCurrent ? 'active' : ''}`}>{slide.description}</p>
+              <p 
+                className={`slide-title ${isCurrent ? 'active' : ''}`} 
+                dangerouslySetInnerHTML={{ __html: slide.text }} 
+              />
               </div>
             </div>
           );

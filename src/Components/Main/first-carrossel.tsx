@@ -12,59 +12,50 @@ const slides = [
   { 
     id: 1, 
     text: 'Parque Amantikir', 
-    description: 'O Parque Amantikir é um encantador jardim temático com paisagens deslumbrantes e jardins que representam diferentes partes do mundo.', 
-    image: amantikir 
+    image: amantikir,
   },
 
   { id: 2, 
-    text: 'Ducha de Prata', 
-    description: 'A Ducha de Prata é uma atração turística popular conhecida por suas belas quedas d\'água e paisagens naturais encantadoras.', 
+    text: 'Ducha de<br>Prata', 
     image: duchadeprata 
   },
 
   { 
     id: 3, 
     text: 'Mirante dos Castelos', 
-    description: 'O Mirante dos Castelos é um ponto turístico famoso que oferece uma vista panorâmica deslumbrante da cidade e das montanhas ao redor.', 
     image: mirantedoscastelos 
   },
 
   { 
     id: 4, 
-    text: 'Pico do Itapeva', 
-    description: 'O Mirante do Pico do Itapeva é um local privilegiado que proporciona uma vista espetacular das montanhas da Serra da Mantiqueira e da região circundante.', 
+    text: 'Pico do<br>Itapeva', 
     image: picodoitapeva 
   },
 
   { 
     id: 5, 
-    text: 'Vila Holandesa', 
-    description: 'A Vila Holandesa em Campos do Jordão é um charmoso complexo arquitetônico que remete à cultura e arquitetura típicas da Holanda, com casinhas coloridas, moinhos de vento e belos jardins.', 
+    text: 'Vila<br>Holandesa', 
     image: vilaholandesa 
   },
 
   { 
     id: 6, 
     text: 'Fábrica de Chocolate', 
-    description: 'A Fábrica de Chocolate em Campos do Jordão é um paraíso para os amantes de chocolate, oferecendo deliciosas opções de doces, bombons e chocolates artesanais.', 
     image: fabricadechocolate 
   },
 ];
 
 const Carousel1 = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isHovered, setHovered] = useState(false);
 
   const nextSlide = () => {
     setCurrentSlide((prevSlide) => {
-      setHovered(false);
       return (prevSlide + 1) % slides.length;
     });
   };
 
   const prevSlide = () => {
     setCurrentSlide((prevSlide) => {
-      setHovered(false);
       return (prevSlide - 1 + slides.length) % slides.length;
     });
   };
@@ -72,10 +63,9 @@ const Carousel1 = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prevSlide) => {
-        setHovered(false);
         return (prevSlide + 1) % slides.length;
       });
-    }, 5000);
+    }, 2000);
 
     return () => {
       clearInterval(interval);
@@ -109,16 +99,13 @@ const Carousel1 = () => {
           const slide = slides[slideIndex];
           const isCurrent = index === 1;
           return (
-            <div
-              key={slide.id}
-              className={`slide ${isCurrent ? 'active' : ''} ${isCurrent && isHovered ? 'slide-hovered' : ''}`}
-              onMouseEnter={() => setHovered(true)}
-              onMouseLeave={() => setHovered(false)}
-            >
+            <div key={slide.id} className={`slide ${isCurrent ? 'active' : ''}`}>
               <img src={slide.image} alt={`Slide ${slide.id}`} />
               <div className="slide-content">
-                <h2 className={`slide-title ${isCurrent ? 'active' : ''}`}>{slide.text}</h2>
-                <p className={`slide-description ${isCurrent ? 'active' : ''}`}>{slide.description}</p>
+              <p 
+                className={`slide-title ${isCurrent ? 'active' : ''}`} 
+                dangerouslySetInnerHTML={{ __html: slide.text }} 
+              />
               </div>
             </div>
           );

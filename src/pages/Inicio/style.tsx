@@ -91,7 +91,7 @@ export const Container = styled.div`
 
     .image-wrapper:hover p { 
         font-size: 2.4vw;
-        text-shadow: 2vw 2vw 1vw #000000;
+        text-shadow: 1px 1px #000, 2px 2px #000, 3px 3px #000;
     }
 
     .image-wrapper img { 
@@ -108,7 +108,7 @@ export const Container = styled.div`
         font-size: 2vw;
         font-weight: 550;
         line-height: 2.5vw;
-        text-shadow: 1vw 1vw 1vw #000000;
+        text-shadow: 2px 2px #000, 2px 2px #000, 3px 3px #000;
     }
 
     .services {

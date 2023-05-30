@@ -29,33 +29,27 @@
 }
 
 .slide-content {
-  display: none;
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
   padding: 2%;
-  background-color: rgba(0, 0, 0, 0.4);
-  color: #fff;
-  text-align: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: flex-end;
+  text-align: left;
 }
 
-.slide.active .slide-content {
-  display: block;
-}
-
-.slide-content .slide-title {
-  color: white;
-  margin-top: 50%;
-  transform: translate(0, -50%);
+.slide-title {
+  display: flex;
+  justify-content: left;
+  height: 12vh;
   font-weight: bold;
-  font-size: 1.2vw;
-}
-
-.slide-content .slide-description {
-  font-size: 1vw;
-  padding-inline: 5.5%;
+  font-size: 2vw;
+  color: white;
+  padding: 0 10px 15px 15px;
+  text-shadow: 2px 2px #000, 2px 2px #000, 3px 3px #000;
 }
 
 .arrow {
