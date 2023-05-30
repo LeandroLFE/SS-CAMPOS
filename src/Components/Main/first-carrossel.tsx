@@ -53,18 +53,28 @@ const slides = [
 
 const Carousel1 = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isHovered, setHovered] = useState(false);
 
   const nextSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
+    setCurrentSlide((prevSlide) => {
+      setHovered(false);
+      return (prevSlide + 1) % slides.length;
+    });
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide - 1 + slides.length) % slides.length);
+    setCurrentSlide((prevSlide) => {
+      setHovered(false);
+      return (prevSlide - 1 + slides.length) % slides.length;
+    });
   };
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
+      setCurrentSlide((prevSlide) => {
+        setHovered(false);
+        return (prevSlide + 1) % slides.length;
+      });
     }, 5000);
 
     return () => {
@@ -72,7 +82,7 @@ const Carousel1 = () => {
     };
   }, []);
 
-  const getSlideIndex = (index: number) => {
+  const getSlideIndex = (index:number) => {
     if (index < 0) {
       return slides.length - Math.abs(index);
     }
@@ -99,7 +109,12 @@ const Carousel1 = () => {
           const slide = slides[slideIndex];
           const isCurrent = index === 1;
           return (
-            <div key={slide.id} className={`slide ${isCurrent ? 'active' : ''}`}>
+            <div
+              key={slide.id}
+              className={`slide ${isCurrent ? 'active' : ''} ${isCurrent && isHovered ? 'slide-hovered' : ''}`}
+              onMouseEnter={() => setHovered(true)}
+              onMouseLeave={() => setHovered(false)}
+            >
               <img src={slide.image} alt={`Slide ${slide.id}`} />
               <div className="slide-content">
                 <h2 className={`slide-title ${isCurrent ? 'active' : ''}`}>{slide.text}</h2>

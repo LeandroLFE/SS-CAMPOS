@@ -35,11 +35,7 @@ export const Container = styled.div`
         color: #FFCC29;
     }
 
-    #button-1.active {
-        color: #FFCC29;
-    }
-    
-    #button-2.active {
+    .button.active {
         color: #FFCC29;
     }
 
@@ -49,10 +45,6 @@ export const Container = styled.div`
 
     #button-2 {
         margin-right: 8vw;
-    }
-
-    .button-header.active {
-        color: #FFCC29;
     }
 
     .icon {
