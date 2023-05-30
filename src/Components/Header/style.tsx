@@ -31,15 +31,7 @@ export const Container = styled.div`
         font-weight: 600;
     }
 
-    .button:hover {
-        color: #FFCC29;
-    }
-
-    .button.active {
-        color: #FFCC29;
-    }
-
-    #button-1 {  
+    #button-1 {
         margin-right: 10vw;
     }
 
@@ -47,6 +39,10 @@ export const Container = styled.div`
         margin-right: 8vw;
     }
 
+    .button.active {
+        color: #FFCC29;
+    }
+   
     .icon {
         width: 50%;
         margin-top: 1vw;

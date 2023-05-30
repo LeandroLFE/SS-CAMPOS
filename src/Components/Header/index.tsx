@@ -4,22 +4,49 @@ import { Container } from "./style";
 import { FaWhatsapp, FaInstagram } from "react-icons/fa";
 import { GoMail } from "react-icons/go";
 import { AiOutlineMenu } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import styled from 'styled-components';
+
+interface LinkProps {
+  isActive: boolean;
+}
+
+const CustomLink = styled(Link)<LinkProps>`
+  color: ${(props) => props.isActive ? '#FFCC29' : 'white'};
+  &:hover {
+    color: #FFCC29;
+  }
+`;
+
+interface ButtonProps {
+  to: string;
+  className?: string;
+  id?: string;
+  children?: React.ReactNode;
+}
+
+const Button: React.FC<ButtonProps> = ({ to, className, id, children }) => {
+  const active = useLocation().pathname === to;
+
+  return (
+    <CustomLink
+      to={to}
+      className={className}
+      id={id}
+      isActive={active}
+    >
+      {children}
+    </CustomLink>
+  );
+};
 
 const Header = () => {
   const isMobileView = window.innerWidth <= 768;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isInicioActive, setIsInicioActive] = useState(true);
-  const [isAgendamentosActive, setIsAgendamentosActive] = useState(false);
+  const location = useLocation();
 
-  const handleInicioClick = () => {
-    setIsInicioActive(true);
-    setIsAgendamentosActive(false);
-  };
-
-  const handleAgendamentosClick = () => {
-    setIsInicioActive(false);
-    setIsAgendamentosActive(true);
+  const handleMenuToggle = () => {
+    setIsMenuOpen((prevIsMenuOpen) => !prevIsMenuOpen);
   };
 
   return (
@@ -30,26 +57,24 @@ const Header = () => {
           alt="logo SS PASSEIOS EM CAMPOS DO JORDÃO"
           className="logo"
         />
-        <Link
+        <Button
           to="/inicio"
-          className={`button ${isInicioActive ? "active" : ""}`}
+          className={`button ${location.pathname === "/inicio" ? "active" : ""}`}
           id="button-1"
-          onClick={handleInicioClick}
         >
           Início
-        </Link>
-        <Link
+        </Button>
+        <Button
           to="/agendamentos"
-          className={`button ${isAgendamentosActive ? "active" : ""}`}
+          className={`button ${location.pathname === "/agendamentos" ? "active" : ""}`}
           id="button-2"
-          onClick={handleAgendamentosClick}
         >
           Agendamentos
-        </Link>
+        </Button>
         {isMobileView ? (
           <i
             className={`menu-icon ${isMenuOpen ? "open" : ""}`}
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            onClick={handleMenuToggle}
           >
             <AiOutlineMenu size={20} color="#FFFFFF" />
           </i>

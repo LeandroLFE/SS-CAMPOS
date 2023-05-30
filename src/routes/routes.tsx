@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom"; // Importe o BrowserRouter separadamente
 
 import Inicio from '../pages/Inicio/Inicio';
@@ -8,8 +8,10 @@ export function RoutesApp() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="*" element={<Inicio />} />
-                <Route path="/" element={<Inicio />} />
+                <Route
+                    path="/"
+                    element={<Navigate to="/inicio" replace />}
+                />
                 <Route path="/inicio" element={<Inicio />} />
                 <Route path="/agendamentos" element={<Agendamentos />} />
             </Routes>
