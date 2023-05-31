@@ -3,6 +3,8 @@ import styled from 'styled-components'
 export const Container = styled.div`
     width: 100vw; 
     background-color: black;
+    overflow-x: hidden;
+
 
     h2 {
         text-transform: uppercase;
@@ -15,7 +17,7 @@ export const Container = styled.div`
         height: auto;
         object-fit: cover;
         object-position: center;
-        position: relative; /* adiciona um contexto para os elementos filhos */
+        position: relative;
     }
 
     .principal-text {

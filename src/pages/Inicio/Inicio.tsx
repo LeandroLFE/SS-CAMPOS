@@ -7,7 +7,7 @@ import transfer from '../../assets/transfer.png';
 import aparecida from '../../assets/Aparecida.png';
 import vinicola from '../../assets/Vinicola.png';
 import museu from '../../assets/Museu.png';
-import palacio from '../../assets/Palacio-boa-vista.png';
+import fazenda from '../../assets/fazenda.png';
 import iconCalendar from '../../assets/icon_calendar_.png';
 import iconMap from '../../assets/icon_map_.png';
 import iconTravelCar from '../../assets/icon_travelcar_.png';
@@ -69,24 +69,24 @@ export default function Inicio () {
           <br /><br />
           <div className="services-images">
             <div className="image-wrapper">
-              <img src={transfer} alt="Imagem de um transfer" className="transfer"/>
+              <img src={transfer} alt="Imagem de um transfer"/>
               <p>TRANSFER PARA AEROPORTO</p>
             </div>
             <div className="image-wrapper">
-              <img src={aparecida} alt="Imagem de Aparecida" className="aparecida"/>
+              <img src={aparecida} alt="Imagem de Aparecida"/>
               <p>CIDADE DE APARECIDA</p>
             </div>
             <div className="image-wrapper">
-              <img src={vinicola} alt="Imagem de uma Vinícola" className="vinicola"/>
+              <img src={vinicola} alt="Imagem de uma Vinícola"/>
               <p>VINÍCOLA SANTA MARIA</p>
             </div>
             <div className="image-wrapper">
-              <img src={museu} alt="Imagem de um Museu" className="museu"/>
+              <img src={museu} alt="Imagem de um Museu"/>
               <p>MUSEU FELÍCIA LEIRNER</p>
             </div>
             <div className="image-wrapper">
-              <img src={palacio} alt="Imagem de um palacio" className="palacio"/>
-              <p>PALÁCIO DA BOA VISTA</p>
+              <img src={fazenda} alt="Imagem da fazenda Pana"/>
+              <p>POR DO SOL NA FAZENDA PRANA</p>
             </div>
           </div>
         </div>
