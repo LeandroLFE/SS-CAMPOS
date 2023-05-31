@@ -35,7 +35,7 @@
   right: 0;
   left: 0;
   padding: 2%;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: flex-end;
   text-align: left;
@@ -83,7 +83,7 @@
 }
 
 .arrow-icon {
-  color: rgba(0, 0, 0, 0.8);
+  color: rgba(0, 0, 0, 0.7);
   font-size: 2vw;
 }
 
