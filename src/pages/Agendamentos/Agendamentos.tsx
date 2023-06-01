@@ -5,7 +5,7 @@ import rafaelBarbosa from "../../assets/rafaelBarbosa.png";
 import erikaSeabra from "../../assets/erikaSeabra.png";
 import juniorFydelles from "../../assets/juniorFydelles.png";
 import mauricioFelix from "../../assets/mauricioFelix.png";
-import suzanneRodrigues from "../../assets/suzanneRodrigues.png";
+import danielabrito from "../../assets/danielabrito.png";
 import { Container } from "./styled";
 import { FiChevronRight } from "react-icons/fi";
 import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
@@ -16,7 +16,7 @@ export default function Agendamentos() {
 
   const handleButtonClick = () => {
     sectionButtonRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };  
+  };
 
   return (
     <>
@@ -31,7 +31,7 @@ export default function Agendamentos() {
           Pronto para viver o charme e o <br />
           conforto de Campos do Jordão?
         </h1>
-         <button className="more-information" onClick={handleButtonClick}>
+        <button className="more-information" onClick={handleButtonClick}>
           Leia Mais <FiChevronRight style={{ verticalAlign: "middle" }} />
         </button>
         {/* */}
@@ -166,24 +166,21 @@ export default function Agendamentos() {
 
             <div className="comment-box">
               <div className="profile-info">
-                <img src={suzanneRodrigues} className="profile-picture" />
+                <img src={danielabrito} className="profile-picture" />
                 <p>
                   {" "}
-                  Suzanne <br /> Rodrigues{" "}
+                  Daniela <br /> Brito{" "}
                 </p>
                 <br />
               </div>
               <ImQuotesLeft className="quote-icon-left" />
               <p className="comment">
-                Foi uma experiência incrível! O Eli foi super cordial e
-                atencioso desde o início ao final do passeio! fizemos o passeio
-                com ele no dia dos namorados, e apesar da cidade estar bastante
-                cheia, ele conseguiu tirar as melhores fotos, com ângulos
-                perfeitos! Recomendo demais
+                O passeio com o Henrique foi maravilhoso. Eu e meu marido estamos em lua de mel e ele foi impecável com as fotos, com as informações dos locais e rendeu grandes risadas!
+                Super indico! ☺️
               </p>
               <ImQuotesRight className="quote-icon-right" />
             </div>
-            
+
             <div className="comment-box right-box" >
             </div>
           </div>
