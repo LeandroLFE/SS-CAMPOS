@@ -81,6 +81,13 @@ const Header = () => {
         ) : (
           <>
             <a
+              href="mailto:SSpasseiosemcampos@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <GoMail className="icon" size={32} />
+            </a>
+            <a
               href="https://api.whatsapp.com/message/IJB2DRZOVPY5B1?autoload=1&app_absent=0"
               target="_blank"
               rel="noopener noreferrer"
@@ -93,13 +100,6 @@ const Header = () => {
               rel="noopener noreferrer"
             >
               <FaInstagram className="icon" size={28} />
-            </a>
-            <a
-              href="mailto:SSpasseiosemcampos@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <GoMail className="icon" size={32} />
             </a>
           </>
         )}

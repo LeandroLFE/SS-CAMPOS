@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import campos_home from '../../assets/campos_home.png';
+import phone from '../../assets/phone.svg';
 import { Container } from './style';
 import Carousel1 from '../../Components/Main/first-carrossel';
 import Carousel2 from '../../Components/Main/second-carrossel';
@@ -34,6 +35,14 @@ export default function Inicio () {
           <button className="more-information" onClick={handleButtonClick}>
           Leia Mais <FiChevronRight style={{ verticalAlign: "middle" }} />
         </button>
+        <div className="phone">
+            <a
+              href="https://www.instagram.com/sspasseiosemcampos/"
+              target="_blank"
+            >
+              <img src={phone} alt="Imagem de um celular na pagina do instagram da empresa" className="phone-image"/>
+            </a>
+        </div>
         </div>
 
         <div className="description">
@@ -69,23 +78,23 @@ export default function Inicio () {
           <br /><br />
           <div className="services-images">
             <div className="image-wrapper">
-              <img src={transfer} alt="Imagem de um transfer"/>
+              <img src={transfer} alt="Imagem de um transfer" className="transfer"/>
               <p>TRANSFER PARA AEROPORTO</p>
             </div>
             <div className="image-wrapper">
-              <img src={aparecida} alt="Imagem de Aparecida"/>
+              <img src={aparecida} alt="Imagem de Aparecida" className="aparecida"/>
               <p>CIDADE DE APARECIDA</p>
             </div>
             <div className="image-wrapper">
-              <img src={vinicola} alt="Imagem de uma Vinícola"/>
+              <img src={vinicola} alt="Imagem de uma Vinícola" className="vinicola"/>
               <p>VINÍCOLA SANTA MARIA</p>
             </div>
             <div className="image-wrapper">
-              <img src={museu} alt="Imagem de um Museu"/>
+              <img src={museu} alt="Imagem de um Museu" className="museu"/>
               <p>MUSEU FELÍCIA LEIRNER</p>
             </div>
             <div className="image-wrapper">
-              <img src={fazenda} alt="Imagem da fazenda Pana"/>
+              <img src={fazenda} alt="Imagem de um palacio" className="palacio"/>
               <p>POR DO SOL NA FAZENDA PRANA</p>
             </div>
           </div>

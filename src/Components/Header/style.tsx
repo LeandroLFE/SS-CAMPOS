@@ -15,7 +15,6 @@ export const Container = styled.div`
         margin-right: auto;
     }
 
-
     .logo {
         width: 13%;
         margin: 1vw 38.7vw 1vw 1vw;
@@ -44,9 +43,10 @@ export const Container = styled.div`
     }
    
     .icon {
-        width: 50%;
         margin-top: 1vw;
-        margin-right: 1.5vw;
+        margin-right: 1vw;
+        width: 60%;
+        height: 60%;
     }
     
     .icon:hover {

@@ -50,6 +50,17 @@ export const Container = styled.div`
         background-color: rgba(255, 204, 41, 0.4);
     }
 
+    .phone {
+        position: absolute;
+        top: 20vh;
+        right: 8vw;
+        cursor: pointer;
+    }
+
+    .phone-image {
+        width: 20vw;
+    }
+
     .title-1 {
         text-align: center;
     }
