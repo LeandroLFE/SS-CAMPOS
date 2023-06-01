@@ -24,7 +24,7 @@ export default function Inicio () {
 
   const handleButtonClick = () => {
     sectionButtonRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };  
+  };
 
     return (
       <div>
@@ -37,15 +37,19 @@ export default function Inicio () {
           Leia Mais <FiChevronRight style={{ verticalAlign: "middle" }} />
           </button>
 
-          <div className="insta">
-            <div className="insta-container">
+          <div>
+            <div className="insta">
               <a
                 href="https://www.instagram.com/sspasseiosemcampos/"
                 target="_blank"
+                className="insta-container"
               >
-                <img src={instagram} alt="Imagem do Instagram" className="insta-image"/>
+                <img src={instagram} alt="Imagem do Instagram" className="insta-image" />
+                <div className="acessoInsta">
+                  <img src={dialog} alt="Caixa de diálogo" className="dialog-image" />
+                  <p className="dialog-text">Acesse nosso Instagram!</p>
+                </div>
               </a>
-              <img src={dialog} alt="Caixa de dialogo" className="dialog-image"/>
             </div>
           </div>
         </div>

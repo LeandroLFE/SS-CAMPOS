@@ -5,6 +5,26 @@ export const Container = styled.div`
     background-color: black;
     overflow-x: hidden;
 
+    @keyframes jump {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
 
     h2 {
         text-transform: uppercase;
@@ -52,19 +72,45 @@ export const Container = styled.div`
 
     .insta {
         position: absolute;
-        top: 70vh;
-        right: 40vw;
-        border: 2px solid red;
-        
+        top: 77vh;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: fadeIn 1s forwards;
     }
 
     .insta-container {
-        border: 2px solid white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .insta-image {
         width: 3vw;
+        border-radius: 50%;
         cursor: pointer;
+        animation: jump 1s infinite;
+    }
+
+    .acessoInsta {
+        position: relative;
+    }
+
+    .dialog-image {
+        width: 12vw;
+    }
+
+    .dialog-text {
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 19px;
+        font-weight: bold;
+        width: 12vw;
+        height: 2.2vh;
+        justify-content: center;
+        text-align: center;
     }
 
     .title-1 {

@@ -44,7 +44,7 @@ export const Container = styled.div`
    
     .icon {
         margin-top: 1vw;
-        margin-right: 1vw;
+        margin-right: 1.2vw;
         width: 60%;
         height: 60%;
     }
