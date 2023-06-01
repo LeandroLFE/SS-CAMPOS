@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import campos_home from '../../assets/campos_home.png';
-import phone from '../../assets/phone.svg';
+import instagram from '../../assets/instagram.png';
+import dialog from '../../assets/dialog.svg';
 import { Container } from './style';
 import Carousel1 from '../../Components/Main/first-carrossel';
 import Carousel2 from '../../Components/Main/second-carrossel';
@@ -34,15 +35,19 @@ export default function Inicio () {
           <h1 className="principal-text">Conheça o melhor de Campos do <br />Jordão com a nossa equipe!</h1>
           <button className="more-information" onClick={handleButtonClick}>
           Leia Mais <FiChevronRight style={{ verticalAlign: "middle" }} />
-        </button>
-        <div className="phone">
-            <a
-              href="https://www.instagram.com/sspasseiosemcampos/"
-              target="_blank"
-            >
-              <img src={phone} alt="Imagem de um celular na pagina do instagram da empresa" className="phone-image"/>
-            </a>
-        </div>
+          </button>
+
+          <div className="insta">
+            <div className="insta-container">
+              <a
+                href="https://www.instagram.com/sspasseiosemcampos/"
+                target="_blank"
+              >
+                <img src={instagram} alt="Imagem do Instagram" className="insta-image"/>
+              </a>
+              <img src={dialog} alt="Caixa de dialogo" className="dialog-image"/>
+            </div>
+          </div>
         </div>
 
         <div className="description">

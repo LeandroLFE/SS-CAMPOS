@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-    width: 100vw;
     display: flex;
     background: black;
 
     .container {
+        width: 100%;
         display: flex;
         flex-direction: column;
     }
@@ -104,7 +104,6 @@ export const Container = styled.div`
     }
 
     .amarela {
-        width: 100vw;
         height: 1.5vw;
         background: #FFCC29;  
     }

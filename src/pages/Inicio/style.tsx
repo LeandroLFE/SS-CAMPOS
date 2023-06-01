@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-    width: 100vw; 
+    width: 100%; 
     background-color: black;
     overflow-x: hidden;
 
@@ -50,15 +50,21 @@ export const Container = styled.div`
         background-color: rgba(255, 204, 41, 0.4);
     }
 
-    .phone {
+    .insta {
         position: absolute;
-        top: 20vh;
-        right: 8vw;
-        cursor: pointer;
+        top: 70vh;
+        right: 40vw;
+        border: 2px solid red;
+        
     }
 
-    .phone-image {
-        width: 20vw;
+    .insta-container {
+        border: 2px solid white;
+    }
+
+    .insta-image {
+        width: 3vw;
+        cursor: pointer;
     }
 
     .title-1 {
@@ -98,6 +104,10 @@ export const Container = styled.div`
         display: inline-block;
     }
 
+    .image-wrapper img { 
+        width: 19.77vw;
+    }
+
     .image-wrapper:hover img { 
         filter: brightness(0.5);
     }
@@ -105,10 +115,6 @@ export const Container = styled.div`
     .image-wrapper:hover p { 
         font-size: 2.4vw;
         text-shadow: 1px 1px #000, 2px 2px #000, 3px 3px #000;
-    }
-
-    .image-wrapper img { 
-        width: 20vw;
     }
 
     .image-wrapper p {
