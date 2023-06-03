@@ -34,7 +34,7 @@ export const Container = styled.div`
 
     .campos_home {
         width: 100%;
-        height: auto;
+        height: 100vh;;
         object-fit: cover;
         object-position: center;
         position: relative;
@@ -299,7 +299,7 @@ export const Container = styled.div`
         line-height: 2.2vw;
     }
 
-    /* Smartphones */
+    /* Smartphones 
     @media (min-width: 375px) and (max-width: 480px) {
     
     }
@@ -308,23 +308,93 @@ export const Container = styled.div`
 
     }
 
-    /* Tablets */
+    /* Tablets 
     @media (min-width: 768px) and (max-width: 1023px) {
-    /* Estilos para tablets */
+    /* Estilos para tablets 
     }
 
-    /* Laptops e desktops menores */
+    /* Laptops e desktops menores 
     @media (min-width: 1024px) and (max-width: 1279px) {
-    /* Estilos para laptops e desktops menores */
+    /* Estilos para laptops e desktops menores 
     }
 
-    /* Laptops e desktops maiores */
+    /* Laptops e desktops maiores 
     @media (min-width: 1280px) and (max-width: 1439px) {
-    /* Estilos para laptops e desktops maiores */
+    /* Estilos para laptops e desktops maiores 
     }
 
-    /* Laptops e desktops ainda maiores */
+    /* Laptops e desktops ainda maiores 
     @media (min-width: 1440px) and (max-width: 1919px) {
-    /* Estilos para laptops e desktops ainda maiores */
+    /* Estilos para laptops e desktops ainda maiores 
+    }*/
+
+    /* Estilos para dispositivos menores que 768px (smartphones e tablets) */
+    @media (max-width: 767px) {
+    .principal-text {
+        top: 70%;
+        font-size: 5.8vw;
+        line-height: 7vw;
     }
+
+    .more-information {
+        top: 76%;
+        font-size: 3vw;
+        padding: 2vw 4vw;
+    }
+
+    .insta {
+        top: 85vh;
+    }
+
+    .insta-image {
+        width: 8vw;
+    }
+
+    .dialog-image {
+        width: 40vw;
+    }
+
+    .dialog-text {
+        font-size: 3vw;
+        width: 40vw;
+        height: auto;
+    }
+    }
+
+
+
+
+/* Estilos para dispositivos maiores que 768px (laptops e desktops) 
+AINDA NÃO MEXI NESSAS MEDIDAS*/
+@media (min-width: 768px) {
+  .principal-text {
+    font-size: 3.5vw;
+    line-height: 4vw;
+  }
+
+  .more-information {
+    font-size: 1vw;
+    padding: 0.69vw 1.67vh;
+  }
+
+  .insta {
+    top: 77vh;
+  }
+
+  .insta-image {
+    width: 3vw;
+  }
+
+  .dialog-image {
+    width: 12vw;
+  }
+
+  .dialog-text {
+    top: 55%;
+    font-size: 19px;
+    width: 12vw;
+    height: 2.2vh;
+  }
+}
+
 `;

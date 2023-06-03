@@ -3,7 +3,7 @@ import logo from "../../assets/logo_horizontal.png";
 import { Container } from "./style";
 import { FaWhatsapp, FaInstagram } from "react-icons/fa";
 import { GoMail } from "react-icons/go";
-import { AiOutlineMenu } from "react-icons/ai";
+import { FaEllipsisV } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 import styled from 'styled-components';
 
@@ -76,7 +76,7 @@ const Header = () => {
             className={`menu-icon ${isMenuOpen ? "open" : ""}`}
             onClick={handleMenuToggle}
           >
-            <AiOutlineMenu size={20} color="#FFFFFF" />
+            <FaEllipsisV size={20} color="#FFFFFF" />
           </i>
         ) : (
           <>

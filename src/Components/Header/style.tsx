@@ -54,12 +54,6 @@ export const Container = styled.div`
         cursor: pointer;
     }
 
-    .menu-icon {
-        color: #ffffff;
-        cursor: pointer;
-        /* Add any additional styles as needed */
-    }
-
     a {
         color: inherit;
         text-decoration: none;
@@ -92,7 +86,7 @@ export const Container = styled.div`
     }
 
 
-    /* Smartphones */
+    /* Smartphones 
     @media (min-width: 375px) and (max-width: 480px) {
         
     }
@@ -101,25 +95,59 @@ export const Container = styled.div`
 
     }
 
-    /* Tablets */
+    /* Tablets 
     @media (min-width: 768px) and (max-width: 1023px) {
         .icon {
             display: none;
         }
     }
 
-    /* Laptops e desktops menores */
+    /* Laptops e desktops menores 
     @media (min-width: 1024px) and (max-width: 1279px) {
-    /* Estilos para laptops e desktops menores */
+    /* Estilos para laptops e desktops menores 
     }
 
-    /* Laptops e desktops maiores */
+    /* Laptops e desktops maiores 
     @media (min-width: 1280px) and (max-width: 1439px) {
-    /* Estilos para laptops e desktops maiores */
+    /* Estilos para laptops e desktops maiores 
     }
 
-    /* Laptops e desktops ainda maiores */
+    /* Laptops e desktops ainda maiores 
     @media (min-width: 1440px) and (max-width: 1919px) {
-    /* Estilos para laptops e desktops ainda maiores */
+    /* Estilos para laptops e desktops ainda maiores 
+    }*/
+
+    /* Estilos para dispositivos menores que 768px (smartphones e tablets) */
+    @media (max-width: 767px) {
+        .header {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.1));
+        }
+        
+        .logo {
+            width: 40%;
+            margin: 3vw 5vw 3vw 3vw;
+        }
+
+        .button {
+            font-size: 3vw;
+            margin-top: 3vw;
+        }
+
+        #button-1 {
+            margin-right: 5vw;
+        }
+
+        #button-2 {
+            margin-right: 5vw;
+        }
+
+        .menu-icon {
+            color: #ffffff;
+            cursor: pointer;
+            margin-right: 3vw;
+            margin-top: 3vw;
+        }
     }
+
+
 `;
