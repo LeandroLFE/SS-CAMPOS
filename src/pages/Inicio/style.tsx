@@ -124,13 +124,6 @@ export const Container = styled.div`
         text-align: justify;
     }
 
-    .first-road-map,
-    .second-road-map {
-        width: 85vw;
-        margin: auto;
-        padding: 0 70px;
-    }
-
     .title-2, 
     .title-3,
     .title-4,
