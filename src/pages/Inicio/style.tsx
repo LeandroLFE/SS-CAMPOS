@@ -143,22 +143,27 @@ export const Container = styled.div`
         font-size: 1.1vw;
         text-align: center;
     }
+
+    .services-images {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
     
     .image-wrapper { 
+        flex: 1;
         cursor: pointer;
         position: relative;
-        display: inline-block;
     }
 
-    .image-wrapper img { 
-        width: 19.77vw;
+    .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
-    .image-wrapper:hover img { 
+    .image-wrapper:hover { 
         filter: brightness(0.5);
-    }
-
-    .image-wrapper:hover p { 
         font-size: 2.4vw;
         text-shadow: 1px 1px #000, 2px 2px #000, 3px 3px #000;
     }
