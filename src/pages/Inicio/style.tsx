@@ -330,35 +330,146 @@ export const Container = styled.div`
 
     /* Estilos para dispositivos menores que 768px (smartphones e tablets) */
     @media (max-width: 767px) {
-    .principal-text {
-        top: 70%;
-        font-size: 5.8vw;
-        line-height: 7vw;
-    }
+        h2 {
+            font-size: 4.1vw; 
+        }
+        
+        .principal-text {
+            top: 70%;
+            font-size: 5.8vw;
+            line-height: 7vw;
+        }
 
-    .more-information {
-        top: 76%;
-        font-size: 3vw;
-        padding: 2vw 4vw;
-    }
+        .more-information {
+            top: 76%;
+            font-size: 3vw;
+            padding: 2vw 4vw;
+        }
 
-    .insta {
-        top: 85vh;
-    }
+        .insta {
+            top: 85vh;
+        }
 
-    .insta-image {
-        width: 8vw;
-    }
+        .insta-image {
+            width: 8vw;
+        }
 
-    .dialog-image {
-        width: 40vw;
-    }
+        .dialog-image {
+            width: 40vw;
+        }
 
-    .dialog-text {
-        font-size: 3vw;
-        width: 40vw;
-        height: auto;
-    }
+        .dialog-text {
+            font-size: 3vw;
+            width: 40vw;
+            height: auto;
+        }
+
+        .description {
+            margin-top: 2vh;
+        }
+
+        .paragraph-description,
+        .information-paragraph {
+            font-size: 2.77vw;
+        }
+
+        .title-2, 
+        .title-3,
+        .title-4,
+        .title-5 {
+            margin-top: 14%;
+        }
+
+        .services-images {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 0 auto;
+        }
+        
+        .image-wrapper { 
+            width: 50%;
+            flex: 0 0 50%;
+            box-sizing: border-box;
+            padding: 0.5%;
+            text-align: center;
+        }
+
+        .image-wrapper p {
+            font-size: 3vw;
+            line-height: 2.5vw;
+        }
+
+        .icon-wrapper {
+            padding: 6.5vw 9.5vw;
+        }
+
+        .icon-wrapper img {
+            width: 10.5vw;
+            height: 9.5vw;
+        }
+
+        .icon-wrapper p {
+            font-size: 2vw;
+        }
+
+        .budget {
+            font-size: 2.5vw;
+            padding: 2vw 4vw;
+            margin-top: 8%;
+        }
+
+        .differential {
+            margin-top: 14%;
+        }
+
+        .differential-wrapper, 
+        .professional-camera-information {
+            flex-direction: column;
+        }
+
+
+
+
+
+
+
+
+        .differential-information,
+        .professional-camera-information {
+            width: 62%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+
+
+
+
+
+
+        .title-6,
+        .title-7 {
+            line-height: 4.1vw;
+        }
+        .professional-camera-wrapper img,
+        .differential-wrapper img {
+            width: 100%;
+        }
+
+        .paragraph-bold {
+            font-weight: bold;
+        }
+
+        .differential-information p,
+        .professional-camera-information p {
+            font-size: 1.1vw;
+            line-height: 2.2vw;
+        }
     }
 
 
