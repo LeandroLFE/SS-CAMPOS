@@ -13,7 +13,7 @@ export const Container = styled.div`
 
   .campos_schedules {
       width: 100%;
-      height: auto;
+      height: 100vh;
       object-fit: cover;
       object-position: center;
       position: relative; /* adiciona um contexto para os elementos filhos */
@@ -150,32 +150,46 @@ export const Container = styled.div`
     font-size: 1.07vw;
   }
 
-  /* Smartphones */
-  @media (min-width: 375px) and (max-width: 480px) {
-    
+  @media (max-width: 767px) {
+    h2 {
+      font-size: 6.5vw; 
+    }
+
+    .principal-text {
+      width: 80%;
+      top: 70%;
+      font-size: 7vw;
+      line-height: 9vw;
   }
 
-  @media (min-width: 481px) and (max-width: 767px) {
-
+  .more-information {
+    top: 82%;
+    font-size: 3.5vw;
+    padding: 2vw 4vw;
   }
 
-  /* Tablets */
-  @media (min-width: 768px) and (max-width: 1023px) {
-    /* Estilos para tablets */
+  .title-1,
+  .title-2 {
+    padding-bottom: 2vw;
+    margin-top: 14%;
   }
 
-  /* Laptops e desktops menores */
-  @media (min-width: 1024px) and (max-width: 1279px) {
-    /* Estilos para laptops e desktops menores */
+  .paragraph-description {
+    font-size: 4vw;
+    width: 95%;
+    margin-left: 3%;
   }
 
-  /* Laptops e desktops maiores */
-  @media (min-width: 1280px) and (max-width: 1439px) {
-    /* Estilos para laptops e desktops maiores */
+  .button-schedule {
+      display: flex;
+      justify-content: center;
   }
 
-  /* Laptops e desktops ainda maiores */
-  @media (min-width: 1440px) and (max-width: 1919px) {
-    /* Estilos para laptops e desktops ainda maiores */
+  .schedule {
+    top: 80%;
+    font-size: 3.5vw;
+    padding: 2vw 4vw;
+  }
+
   }
 `;
