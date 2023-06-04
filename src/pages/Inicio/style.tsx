@@ -42,6 +42,7 @@ export const Container = styled.div`
 
     .principal-text {
         position: absolute;
+        width: 58vw;
         top: 50%;
         left: 5%;
         transform: translateY(-50%);
@@ -68,49 +69,6 @@ export const Container = styled.div`
     .more-information:hover {
         color: #FFCC29;
         background-color: rgba(255, 204, 41, 0.4);
-    }
-
-    .insta {
-        position: absolute;
-        top: 77vh;
-        left: 50%;
-        transform: translateX(-50%);
-        animation: fadeIn 1s forwards;
-    }
-
-    .insta-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .insta-image {
-        width: 3vw;
-        border-radius: 50%;
-        cursor: pointer;
-        animation: jump 1s infinite;
-    }
-
-    .acessoInsta {
-        position: relative;
-    }
-
-    .dialog-image {
-        width: 12vw;
-    }
-
-    .dialog-text {
-        position: absolute;
-        top: 55%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: white;
-        font-size: 19px;
-        font-weight: bold;
-        width: 12vw;
-        height: 2.2vh;
-        justify-content: center;
-        text-align: center;
     }
 
     .title-1 {
@@ -211,11 +169,6 @@ export const Container = styled.div`
         text-align: center;
         font-size: 1vw;
         text-decoration: none;
-    }
-
-    .icon-wrapper a {
-        text-decoration: none;
-        color: white;
     }
 
     .button-budget {
@@ -331,37 +284,20 @@ export const Container = styled.div`
     /* Estilos para dispositivos menores que 768px (smartphones e tablets) */
     @media (max-width: 767px) {
         h2 {
-            font-size: 4.1vw; 
+            font-size: 6vw; 
         }
         
         .principal-text {
+            width: 80%;
             top: 70%;
-            font-size: 5.8vw;
-            line-height: 7vw;
+            font-size: 7vw;
+            line-height: 9vw;
         }
 
         .more-information {
-            top: 76%;
-            font-size: 3vw;
+            top: 80%;
+            font-size: 3.5vw;
             padding: 2vw 4vw;
-        }
-
-        .insta {
-            top: 85vh;
-        }
-
-        .insta-image {
-            width: 8vw;
-        }
-
-        .dialog-image {
-            width: 40vw;
-        }
-
-        .dialog-text {
-            font-size: 3vw;
-            width: 40vw;
-            height: auto;
         }
 
         .description {
@@ -370,7 +306,9 @@ export const Container = styled.div`
 
         .paragraph-description,
         .information-paragraph {
-            font-size: 2.77vw;
+            font-size: 3.2vw;
+            width: 80%;
+            margin-left: 10%;
         }
 
         .title-2, 
@@ -402,17 +340,33 @@ export const Container = styled.div`
             line-height: 2.5vw;
         }
 
+        .services-group {
+            flex-direction: column;
+            align-items: center;
+            gap: 2vh;
+        }
+
         .icon-wrapper {
-            padding: 6.5vw 9.5vw;
+            width: 40vw; 
+            height: 40vw;
+            padding: 0;
+            margin: 0;
+        }
+
+        .icon-wrapper:hover {
+            transform: scale(0);
         }
 
         .icon-wrapper img {
-            width: 10.5vw;
-            height: 9.5vw;
+            width: 15vw;
+            height: 14vw;
+            margin-bottom: 10%;
+            padding: 0 10vw;
         }
 
         .icon-wrapper p {
-            font-size: 2vw;
+            font-size: 3.2vw;
+            font-weight: bold;
         }
 
         .budget {

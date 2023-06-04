@@ -32,26 +32,10 @@ export default function Inicio () {
         <Container>
         <div className="top-main">
           <img src={campos_home} alt="Entrada de Campos do Jordão" className="campos_home"/>
-          <h1 className="principal-text">Conheça o melhor de Campos do <br />Jordão com a nossa equipe!</h1>
+          <h1 className="principal-text">Conheça o melhor de Campos do Jordão com a nossa equipe!</h1>
           <button className="more-information" onClick={handleButtonClick}>
           Leia Mais <FiChevronRight style={{ verticalAlign: "middle" }} />
           </button>
-
-          <div>
-            <div className="insta">
-              <a
-                href="https://www.instagram.com/sspasseiosemcampos/"
-                target="_blank"
-                className="insta-container"
-              >
-                <img src={instagram} alt="Imagem do Instagram" className="insta-image" />
-                <div className="acessoInsta">
-                  <img src={dialog} alt="Caixa de diálogo" className="dialog-image" />
-                  <p className="dialog-text">Acesse nosso Instagram!</p>
-                </div>
-              </a>
-            </div>
-          </div>
         </div>
 
         <div className="description">
@@ -114,22 +98,16 @@ export default function Inicio () {
           <br /><br />
           <div className="services-group">
             <div className="icon-wrapper">
-              <a href="https://api.whatsapp.com/message/IJB2DRZOVPY5B1?autoload=1&app_absent=0" target="_blank">
-                <img src={iconTravelCar} alt="ícone carro"/>
-                <p>Carro exclusivo</p>
-              </a>
+              <img src={iconTravelCar} alt="ícone carro"/>
+              <p>Carro exclusivo</p>
             </div>
             <div className="icon-wrapper">
-              <a href="https://api.whatsapp.com/message/IJB2DRZOVPY5B1?autoload=1&app_absent=0" target="_blank">
-                <img src={iconMap} alt="ícone mapa"/>
-                <p>Guia particular</p>
-              </a>
+              <img src={iconMap} alt="ícone mapa"/>
+              <p>Guia particular</p>
             </div>
             <div className="icon-wrapper">
-              <a href="https://api.whatsapp.com/message/IJB2DRZOVPY5B1?autoload=1&app_absent=0" target="_blank">
-                <img src={iconCalendar} alt="ícone calendario"/>
-                <p>Vagas Limitadas</p>
-              </a>
+              <img src={iconCalendar} alt="ícone calendario"/>
+              <p>Vagas Limitadas</p>
             </div>
           </div>
           <div className="button-budget">
