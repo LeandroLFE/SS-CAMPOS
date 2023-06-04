@@ -124,32 +124,51 @@ export const Container = styled.div`
         text-decoration: none;
     }
 
-    /* Smartphones */
-    @media (min-width: 375px) and (max-width: 480px) {
-        
+    @media (max-width: 767px) {
+
+    .footer {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 2vh;
     }
 
-    @media (min-width: 481px) and (max-width: 767px) {
-
+    .logo {
+      width: 50%;
+      margin: 0;
+      border-right: none;
+      padding: 2vh;
     }
 
-    /* Tablets */
-    @media (min-width: 768px) and (max-width: 1023px) {
-    /* Estilos para tablets */
+    .paginas {
+      align-items: left;
+      font-size: 2vh;
+      margin-top: 5%;
+      margin-bottom: 5%;
     }
 
-    /* Laptops e desktops menores */
-    @media (min-width: 1024px) and (max-width: 1279px) {
-    /* Estilos para laptops e desktops menores */
+    .button {
+      font-size: 14px;
+      margin-top: 10px;
     }
 
-    /* Laptops e desktops maiores */
-    @media (min-width: 1280px) and (max-width: 1439px) {
-    /* Estilos para laptops e desktops maiores */
+    .devs {
+      margin-top: 4vh;
     }
 
-    /* Laptops e desktops ainda maiores */
-    @media (min-width: 1440px) and (max-width: 1919px) {
-    /* Estilos para laptops e desktops ainda maiores */
+    .contact {
+      margin: 0;
+      margin-top: 1vh;
+      align-items: center;
+    }
+
+    .icon {
+      width: 20px;
+      margin-right: 2vh;
+    }
+
+    .email {
+      font-size: 14px;
+      margin-top: 10px;
     }
 `;
