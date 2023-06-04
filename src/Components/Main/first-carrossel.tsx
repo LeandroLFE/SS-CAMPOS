@@ -60,6 +60,10 @@ const Carousel1 = () => {
     });
   };
 
+  const updateCurrentSlide = (index:number) => {
+    setCurrentSlide(index);
+  };
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prevSlide) => {
@@ -91,28 +95,39 @@ const Carousel1 = () => {
 
   return (
     <div className="carousel-container">
-      <div className="arrow left-arrow" onClick={prevSlide}>
-        <FaChevronLeft className="arrow-icon" />
-      </div>
-      <div className="carousel">
-        {visibleSlides.map((slideIndex, index) => {
-          const slide = slides[slideIndex];
-          const isCurrent = index === 1;
-          return (
-            <div key={slide.id} className={`slide ${isCurrent ? 'active' : ''}`}>
-              <img src={slide.image} alt={`Slide ${slide.id}`} />
-              <div className="slide-content">
-              <p 
-                className={`slide-title ${isCurrent ? 'active' : ''}`} 
-                dangerouslySetInnerHTML={{ __html: slide.text }} 
-              />
+      <div className="carrossel-envolve">
+        <div className="arrow left-arrow" onClick={prevSlide}>
+          <FaChevronLeft className="arrow-icon" />
+        </div>
+        <div className="carousel">
+          {visibleSlides.map((slideIndex, index) => {
+            const slide = slides[slideIndex];
+            const isCurrent = index === 1;
+            return (
+              <div key={slide.id} className={`slide ${isCurrent ? 'active' : ''}`}>
+                <img src={slide.image} alt={`Slide ${slide.id}`} />
+                <div className="slide-content">
+                <p 
+                  className={`slide-title ${isCurrent ? 'active' : ''}`} 
+                  dangerouslySetInnerHTML={{ __html: slide.text }} 
+                />
+                </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
+        <div className="arrow right-arrow" onClick={nextSlide}>
+          <FaChevronRight className="arrow-icon" />
+        </div>
       </div>
-      <div className="arrow right-arrow" onClick={nextSlide}>
-        <FaChevronRight className="arrow-icon" />
+      <div className="dots">
+          {slides.map((slide, index) => (
+            <div
+              key={slide.id}
+              className={`dot ${currentSlide === index ? 'active' : ''}`}
+              onClick={() => updateCurrentSlide(index)}
+            ></div>
+          ))}
       </div>
     </div>
   );
