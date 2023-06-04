@@ -99,7 +99,32 @@
 
 /* Smartphones */
 @media (min-width: 375px) and (max-width: 480px) {
-  
+
+  .slide img {
+    width: 60vw;
+  }
+
+  .slide-title {
+    font-size: 9vw;
+    padding: 0 0 40px 20px ;
+  }
+
+  .slide:hover .slide-title { 
+    font-size: 9vw;
+    padding: 0 0 40px 20px ;
+  }
+
+  .arrow {
+    height: 3vh;
+    width: 8%;
+  }
+
+  .arrow:hover {
+    color: rgba(255, 204, 41, 1);
+    height: 4vh;
+    width: 10%;
+  }
+
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
