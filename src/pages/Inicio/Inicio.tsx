@@ -38,7 +38,6 @@ export default function Inicio () {
 
         <div className="description">
           <h2 className="title-1" ref={sectionButtonRef}>O que oferecemos</h2>
-          <br />
           <div className="paragraph-description">
             <p>Oferecemos a vocês uma experiência única ao explorar os principais pontos turísticos de Campos do Jordão acompanhados por nossa equipe altamente qualificada. Nossos guias particulares irão proporcionar um passeio diferenciado, explicando detalhadamente sobre cada local visitado.</p>
             <br />
@@ -53,20 +52,17 @@ export default function Inicio () {
         <div className="first-road-map">
           <h2 className="title-2">Roteiro 1</h2>
           <p className="information-paragraph">Duração de 6h com parada para almoço.</p>
-          <br /><br />
           <Carousel1/>
         </div>
 
         <div className="second-road-map">
           <h2 className="title-3">Roteiro 2</h2>
           <p className="information-paragraph">Duração de 3h.</p>
-          <br /><br />
           <Carousel2/>
         </div>
 
         <div className="other-services">
           <h2 className="title-4">Outros Atendimentos</h2>
-          <br /><br />
           <div className="services-images">
             <div className="image-wrapper">
               <img src={transfer} alt="Imagem de um transfer" className="transfer"/>
@@ -93,7 +89,6 @@ export default function Inicio () {
 
         <div className="services">
           <h2 className="title-5">Serviços</h2>
-          <br /><br />
           <div className="services-group">
             <div className="icon-wrapper">
               <img src={iconTravelCar} alt="ícone carro"/>
@@ -120,7 +115,6 @@ export default function Inicio () {
             <img src={differential} alt="Imagem de uma família em Campos do Jordão"/>
             <div className="differential-information">
               <h2 className="title-6">DIFERENCIAL DO NOSSO TRABALHO</h2>
-              <br /><br />
               <p>1- Nossos passeios são exclusivos com um guia para no máximo 4 pessoas.</p>
               <p>2- Fazemos passeios nos nossos carros, assim da para dar a devida atenção para cada um (principalmente pelas fotos).</p>
               <p>3- PREZAMOS PELA QUALIDADE E NÃO QUANTIDADE. </p>
@@ -136,7 +130,6 @@ export default function Inicio () {
           <div className="professional-camera-wrapper">
             <div className="professional-camera-information">
               <h2 className="title-7">AS FOTOS SÃO TIRADAS DE CÂMERA PROFISSIONAL?</h2>
-              <br /><br />
               <p>NÃO. Todas as fotos são tiradas do celular do próprio cliente.</p>
               <br />
               <p className="paragraph-bold">Por que?</p>

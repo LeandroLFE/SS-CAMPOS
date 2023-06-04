@@ -73,6 +73,7 @@ export const Container = styled.div`
 
     .title-1 {
         text-align: center;
+        padding-bottom: 2vw;
     }
 
     .paragraph-description {
@@ -90,9 +91,15 @@ export const Container = styled.div`
         text-align: center;
     }
 
+    .title-4,
+    .title-5 {
+        padding-bottom: 2vw;
+    }
+
     .information-paragraph {
         font-size: 1.1vw;
         text-align: center;
+        padding-bottom: 2vw;
     }
 
     .services-images {
@@ -219,6 +226,7 @@ export const Container = styled.div`
     .title-6,
     .title-7 {
         line-height: 3vw;
+        padding-bottom: 2vw;
     }
 
     .professional-camera {
@@ -311,6 +319,7 @@ export const Container = styled.div`
         .title-3,
         .title-4,
         .title-5 {
+            padding-bottom: 2vw;
             margin-top: 14%;
         }
 
@@ -357,8 +366,7 @@ export const Container = styled.div`
         }
 
         .icon-wrapper p {
-            font-size: 3.2vw;
-            font-weight: bold;
+            font-size: 4vw;
         }
 
         .budget {
@@ -371,36 +379,23 @@ export const Container = styled.div`
             margin-top: 14%;
         }
 
-        .differential-wrapper, 
-        .professional-camera-information {
+        .differential-wrapper {
             flex-direction: column;
         }
-
-
-
-
-
-
-
 
         .differential-information,
         .professional-camera-information {
-            width: 62%;
+            width: 95%;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            text-align: center;
+            justify-content: justify;
+            text-align: left;
         }
-
-
-
-
-
-
 
         .title-6,
         .title-7 {
-            line-height: 4.1vw;
+            line-height: 7vw;
+            margin-top: 14%;
         }
         .professional-camera-wrapper img,
         .differential-wrapper img {
@@ -411,10 +406,29 @@ export const Container = styled.div`
             font-weight: bold;
         }
 
+        .differential-information {
+            margin-left: 3%;
+        }
+
         .differential-information p,
         .professional-camera-information p {
-            font-size: 1.1vw;
-            line-height: 2.2vw;
+            font-size: 4vw;
+            line-height: 7vw;
+        }
+
+        .professional-camera-wrapper {
+            position: relative;
+        }
+
+        .professional-camera-information {
+            margin-top: 45vh;
+            margin-right: 2%;
+            text-align: left;
+        }
+
+        .professional-camera-wrapper img {
+            position: absolute;
+            left: 0;
         }
     }
 
