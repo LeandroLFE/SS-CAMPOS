@@ -324,20 +324,16 @@ export const Container = styled.div`
         }
 
         .services-images {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            margin: 0 auto;
+            display: block;
+            white-space: nowrap;
         }
-        
-        .image-wrapper { 
-            width: 50%;
-            flex: 0 0 50%;
-            box-sizing: border-box;
-            padding: 0.5%;
-            text-align: center;
+
+        .image-wrapper {
+            display: inline-block;
+            vertical-align: top;
+            white-space: normal;
+            margin-right: 0;
+            margin-bottom: 10px; /
         }
 
         .image-wrapper p {
@@ -429,6 +425,23 @@ export const Container = styled.div`
         .professional-camera-wrapper img {
             position: absolute;
             left: 0;
+        }
+
+       .services-images{
+            display: flex;
+            overflow-x: auto;
+        }
+
+        .image-wrapper {
+            flex: 0 0 auto;
+            cursor: pointer;
+            position: relative;
+            margin-right: 10px; /* Espaçamento entre as imagens */
+        }
+
+        .image-wrapper p{
+            font-size: 4vh;
+            line-height: 9vw;
         }
     }
 
