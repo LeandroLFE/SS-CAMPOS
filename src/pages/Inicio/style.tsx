@@ -155,10 +155,6 @@ export const Container = styled.div`
         transition: transform 0.3s;
     }
 
-    .icon-wrapper:hover {
-        transform: scale(1.1);
-    }
-
     .icon-wrapper img {
         width: 7vw;
         height: 6.5vw;
@@ -351,10 +347,6 @@ export const Container = styled.div`
             height: 40vw;
             padding: 0;
             margin: 0;
-        }
-
-        .icon-wrapper:hover {
-            transform: scale(0);
         }
 
         .icon-wrapper img {
