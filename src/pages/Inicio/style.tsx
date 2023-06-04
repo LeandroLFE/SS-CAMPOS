@@ -441,25 +441,6 @@ AINDA NÃO MEXI NESSAS MEDIDAS*/
     font-size: 1vw;
     padding: 0.69vw 1.67vh;
   }
-
-  .insta {
-    top: 77vh;
-  }
-
-  .insta-image {
-    width: 3vw;
-  }
-
-  .dialog-image {
-    width: 12vw;
-  }
-
-  .dialog-text {
-    top: 55%;
-    font-size: 19px;
-    width: 12vw;
-    height: 2.2vh;
-  }
 }
 
 `;

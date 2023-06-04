@@ -1,7 +1,5 @@
 import { useRef } from 'react';
 import campos_home from '../../assets/campos_home.png';
-import instagram from '../../assets/instagram.png';
-import dialog from '../../assets/dialog.svg';
 import { Container } from './style';
 import Carousel1 from '../../Components/Main/first-carrossel';
 import Carousel2 from '../../Components/Main/second-carrossel';
