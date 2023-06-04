@@ -280,7 +280,7 @@ export const Container = styled.div`
     /* Estilos para dispositivos menores que 768px (smartphones e tablets) */
     @media (max-width: 767px) {
         h2 {
-            font-size: 6vw; 
+            font-size: 6.5vw; 
         }
         
         .principal-text {
@@ -302,9 +302,9 @@ export const Container = styled.div`
 
         .paragraph-description,
         .information-paragraph {
-            font-size: 3.2vw;
-            width: 80%;
-            margin-left: 10%;
+            font-size: 4vw;
+            width: 95%;
+            margin-left: 3%;
         }
 
         .title-2, 
