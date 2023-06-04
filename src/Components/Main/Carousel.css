@@ -108,6 +108,10 @@
     width: 35.5vw;
   }
 
+  .slide:hover img { 
+    filter: brightness(1);
+  }
+
   .slide-title,
   .slide:hover .slide-title {
     font-size: 5vw;
