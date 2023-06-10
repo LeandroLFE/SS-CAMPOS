@@ -37,7 +37,7 @@ export default function Inicio () {
         </div>
 
         <div className="description">
-          <h2 className="title-1" ref={sectionButtonRef}>O que oferecemos</h2>
+          <h2 id="title-1" className="title-1" ref={sectionButtonRef}>O que oferecemos</h2>
           <div className="paragraph-description">
             <p>Oferecemos a vocês uma experiência única ao explorar os principais pontos turísticos de Campos do Jordão acompanhados por nossa equipe altamente qualificada. Nossos guias particulares irão proporcionar um passeio diferenciado, explicando detalhadamente sobre cada local visitado.</p>
             <br />
@@ -49,7 +49,7 @@ export default function Inicio () {
           </div>      
         </div>
 
-        <div className="first-road-map">
+        <div id="first-road-map" className="first-road-map">
           <h2 className="title-2">Roteiro 1</h2>
           <p className="information-paragraph">Duração de 6h com parada para almoço.</p>
           <Carousel1/>
@@ -61,7 +61,7 @@ export default function Inicio () {
           <Carousel2/>
         </div>
 
-        <div className="other-services">
+        <div id="other-services" className="other-services">
           <h2 className="title-4">Outros Atendimentos</h2>
           <div className="services-images">
             <div className="image-wrapper">
@@ -87,7 +87,7 @@ export default function Inicio () {
           </div>
         </div>
 
-        <div className="services">
+        <div id="services" className="services">
           <h2 className="title-5">Serviços</h2>
           <div className="services-group">
             <div className="icon-wrapper">
@@ -110,7 +110,7 @@ export default function Inicio () {
           </div>
         </div>
 
-        <div className="differential">
+        <div id="differential" className="differential">
           <div className="differential-wrapper">
             <img src={differential} alt="Imagem de uma família em Campos do Jordão"/>
             <div className="differential-information">

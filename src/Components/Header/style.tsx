@@ -63,16 +63,13 @@ export const Container = styled.div`
         position: absolute;
         top: 100%;
         right: 0;
-        width: 200px; /* Adjust the width as needed */
-        background-color: black;
-        padding: 10px;
-        /* Add any additional styles as needed */
+        left: 0;
     }
 
     .menu-item {
         display: flex;
-        align-items: center;
-        margin-bottom: 10px;
+        flex-direction: column;
+        align-items: left;
     }
 
     /* Hide the menu initially */
@@ -85,39 +82,15 @@ export const Container = styled.div`
         display: block;
     }
 
-
-    /* Smartphones 
-    @media (min-width: 375px) and (max-width: 480px) {
-        
+    .item {
+        border-top: 1px solid #FFCC29;
+        width: 100%;
+        padding: 15px;
+        font-weight: bold;
+        background-color: #121111;
+        font-size: 3.5vw;
     }
 
-    @media (min-width: 481px) and (max-width: 767px) {
-
-    }
-
-    /* Tablets 
-    @media (min-width: 768px) and (max-width: 1023px) {
-        .icon {
-            display: none;
-        }
-    }
-
-    /* Laptops e desktops menores 
-    @media (min-width: 1024px) and (max-width: 1279px) {
-    /* Estilos para laptops e desktops menores 
-    }
-
-    /* Laptops e desktops maiores 
-    @media (min-width: 1280px) and (max-width: 1439px) {
-    /* Estilos para laptops e desktops maiores 
-    }
-
-    /* Laptops e desktops ainda maiores 
-    @media (min-width: 1440px) and (max-width: 1919px) {
-    /* Estilos para laptops e desktops ainda maiores 
-    }*/
-
-    /* Estilos para dispositivos menores que 768px (smartphones e tablets) */
     @media (max-width: 767px) {
         .header {
             background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.1));
@@ -139,13 +112,6 @@ export const Container = styled.div`
 
         #button-2 {
             margin-right: 5vw;
-        }
-
-        .menu-icon {
-            color: #ffffff;
-            cursor: pointer;
-            margin-right: 3vw;
-            margin-top: 3vw;
         }
     }
 
