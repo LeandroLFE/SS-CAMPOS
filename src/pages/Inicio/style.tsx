@@ -366,7 +366,7 @@ export const Container = styled.div`
         }
 
         .budget {
-            font-size: 2.5vw;
+            font-size: 3.5vw;
             padding: 2vw 4vw;
             margin-top: 8%;
         }
@@ -417,7 +417,7 @@ export const Container = styled.div`
         }
 
         .professional-camera-information {
-            margin-top: 45vh;
+            margin-top: 81.5%;
             margin-right: 2%;
             text-align: left;
         }

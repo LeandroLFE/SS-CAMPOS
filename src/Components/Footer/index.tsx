@@ -1,8 +1,8 @@
-//import React from 'react';
+import React from 'react';
 import logo from '../../assets/logo_horizontal.png';
 import { FaWhatsapp, FaInstagram } from "react-icons/fa";
 import { Container } from './style';
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styled from 'styled-components';
 
 interface LinkProps {
@@ -24,14 +24,17 @@ interface ButtonProps {
 }
 
 const Button: React.FC<ButtonProps> = ({ to, className, id, children }) => {
-  const active = useLocation().pathname === to;
+  const handleClick = () => {
+    window.scrollTo(0, 0);
+  };
 
   return (
     <CustomLink
       to={to}
       className={className}
       id={id}
-      isActive={active}
+      onClick={handleClick}
+      isActive={false}
     >
       {children}
     </CustomLink>
@@ -48,35 +51,36 @@ const Footer = () => {
             <p className="title-paginas">PÁGINAS</p>
             <Button
               to="/inicio"
-              className={`button ${location.pathname === "/inicio" ? "active" : ""}`}
+              className="button"
               id="button-1"
             >
               Início
             </Button>
             <Button
               to="/agendamentos"
-              className={`button ${location.pathname === "/agendamentos" ? "active" : ""}`}
+              className="button"
               id="button-2"
             >
               Agendamentos
             </Button>
-            <p className="devs">&copy; Desenvolvido por Daiene Batagioti e Sarah Batagioti</p>
           </div>
           <div className="contact">
             <div className="icons-warp">
-              <a href="https://api.whatsapp.com/message/IJB2DRZOVPY5B1?autoload=1&app_absent=0" target="_blank">
-                <FaWhatsapp className="icon" size={29} />
+              <a href="https://api.whatsapp.com/message/IJB2DRZOVPY5B1?autoload=1&app_absent=0" target="_blank" rel="noopener noreferrer">
+                <FaWhatsapp className="icon"/>
               </a>
-              <a href="https://www.instagram.com/sspasseiosemcampos/" target="_blank">
-                <FaInstagram className="icon" size={28} />
+              <a href="https://www.instagram.com/sspasseiosemcampos/" target="_blank" rel="noopener noreferrer">
+                <FaInstagram className="icon"/>
               </a>
             </div>
-            <a href="mailto:SSpasseiosemcampos@gmail.com" target="_blank">
+            <a href="mailto:SSpasseiosemcampos@gmail.com" target="_blank" rel="noopener noreferrer">
               <p className="email">E-mail: SSpasseiosemcampos@gmail.com</p>
             </a>
           </div>
         </div>
-        <div className="amarela"></div>
+        <div className="amarela">
+          <p className="devs">&copy; Desenvolvido por Daiene Batagioti e Sarah Batagioti</p>
+        </div>
       </div>
     </Container>
   )

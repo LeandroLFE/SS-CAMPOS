@@ -71,12 +71,9 @@ export const Container = styled.div`
         color: #FFCC29;
     }
 
-    .devs {
-        margin-top: 2vw;
-    }
-
     .contact {
-        margin: 3.5vw 0 0 15vw;
+        margin-left: 15vw;
+        padding-top: 1.5vw;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -87,31 +84,28 @@ export const Container = styled.div`
         display: flex;
     }
 
-    #wpp {
-        margin-right: 1vw;
-        width: 2vw;
-        cursor: pointer;
-    }
-
-    #insta {
-        width: 2vw;
-        cursor: pointer;
-    }
-
     .email {
         margin-top: 2vw;
         font-size: 1vw;
     }
 
     .amarela {
-        height: 1.5vw;
+        height: 1.8vw;
         background: #FFCC29;  
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .devs {
+        color: black;
+        font-size: 0.8vw;
+        font-weight: bold;
     }
 
     .icon {
-        width: 50%;
-        margin-top: 1vw;
-        margin-right: 1.5vw;
+        font-size: 2vw;
+        margin-left: 1.5vw;
     }
     
     .icon:hover {
@@ -127,10 +121,9 @@ export const Container = styled.div`
     @media (max-width: 767px) {
 
     .footer {
+      border-top: 2px solid #0f0f0f;
       flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 2vh;
+      padding: 0;
     }
 
     .logo {
@@ -142,7 +135,7 @@ export const Container = styled.div`
 
     .paginas {
       align-items: left;
-      font-size: 2vh;
+      font-size: 4vw;
       margin-top: 5%;
       margin-bottom: 5%;
     }
@@ -152,10 +145,6 @@ export const Container = styled.div`
       margin-top: 10px;
     }
 
-    .devs {
-      margin-top: 4vh;
-    }
-
     .contact {
       margin: 0;
       margin-top: 1vh;
@@ -163,12 +152,21 @@ export const Container = styled.div`
     }
 
     .icon {
-      width: 20px;
-      margin-right: 2vh;
+        font-size: 6.5vw;
+        margin-right: 3vw;
     }
 
     .email {
-      font-size: 14px;
+      font-size: 4vw;
       margin-top: 10px;
+    }
+
+    .amarela {
+        height: 9vw;
+        margin-top: 3.5vh;
+    }
+
+    .devs {
+        font-size: 3vw;
     }
 `;
