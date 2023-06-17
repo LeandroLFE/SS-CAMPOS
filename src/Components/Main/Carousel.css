@@ -117,7 +117,7 @@
   }
 
   .slide img {
-    width: 35.5vw;
+    width: 73vw;
   }
 
   .slide:hover img { 
@@ -126,9 +126,9 @@
 
   .slide-title,
   .slide:hover .slide-title {
-    font-size: 5vw;
+    font-size: 10vw;
     padding: 0 0 0 8px;
-    height: 8vh;
+    height: 17vh;
   }
 
   .arrow, 

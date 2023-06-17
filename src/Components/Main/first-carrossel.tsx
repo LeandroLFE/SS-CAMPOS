@@ -69,7 +69,7 @@ const Carousel1 = () => {
       setCurrentSlide((prevSlide) => {
         return (prevSlide + 1) % slides.length;
       });
-    }, 2000);
+    }, 5000);
 
     return () => {
       clearInterval(interval);
