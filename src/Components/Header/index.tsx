@@ -54,6 +54,7 @@ const Header = () => {
     if (title1Element) {
       title1Element.scrollIntoView({ behavior: 'smooth' });
     }
+    setIsMenuOpen(false);
   };
 
   const handleScrollToRoadMap = () => {
@@ -61,6 +62,7 @@ const Header = () => {
     if (title1Element) {
       title1Element.scrollIntoView({ behavior: 'smooth' });
     }
+    setIsMenuOpen(false);
   };
 
   const handleScrollToOtherServices = () => {
@@ -68,6 +70,7 @@ const Header = () => {
     if (title1Element) {
       title1Element.scrollIntoView({ behavior: 'smooth' });
     }
+    setIsMenuOpen(false);
   };
 
   const handleScrollToServices = () => {
@@ -75,6 +78,7 @@ const Header = () => {
     if (title1Element) {
       title1Element.scrollIntoView({ behavior: 'smooth' });
     }
+    setIsMenuOpen(false);
   };
 
   const handleScrollToDifferential = () => {
@@ -82,10 +86,12 @@ const Header = () => {
     if (title1Element) {
       title1Element.scrollIntoView({ behavior: 'smooth' });
     }
+    setIsMenuOpen(false);
   };
 
   const handleContactButtonClick = () => {
     window.open("https://api.whatsapp.com/message/IJB2DRZOVPY5B1?autoload=1&app_absent=0", "_blank");
+    setIsMenuOpen(false);
   };
 
   return (

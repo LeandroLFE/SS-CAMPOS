@@ -286,6 +286,21 @@ export const Container = styled.div`
     }*/
 
     /* Estilos para dispositivos menores que 768px (smartphones e tablets) */
+    @media (max-width: 1023px) {
+        .principal-text {
+            font-size: 8vw;
+            width: 70vw;
+            top: 62%;
+        }
+        h2 {
+            font-size: 4vw;
+        }
+        .more-information {
+            top: 67%;
+            font-size: 5vw;
+        }
+    }
+    
     @media (max-width: 767px) {
         h2 {
             font-size: 6.5vw; 
@@ -445,11 +460,6 @@ export const Container = styled.div`
         }
     }
 
-
-
-
-/* Estilos para dispositivos maiores que 768px (laptops e desktops) 
-AINDA NÃO MEXI NESSAS MEDIDAS*/
 @media (min-width: 768px) {
   .principal-text {
     font-size: 3.5vw;

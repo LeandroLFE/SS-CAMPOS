@@ -181,7 +181,7 @@ export default function Agendamentos() {
               <ImQuotesRight className="quote-icon-right" />
             </div>
 
-            <div className="comment-box right-box" >
+            <div className="comment-box right-box right-box-none" >
             </div>
           </div>
         </div>
