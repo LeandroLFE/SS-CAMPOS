@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import Header from "../../Components/Header";
 import campos_schedules from "../../assets/campus_schedules.png";
 import rafaelBarbosa from "../../assets/rafaelBarbosa.png";
@@ -6,6 +6,7 @@ import erikaSeabra from "../../assets/erikaSeabra.png";
 import juniorFydelles from "../../assets/juniorFydelles.png";
 import mauricioFelix from "../../assets/mauricioFelix.png";
 import danielabrito from "../../assets/danielabrito.png";
+import karine from "../../assets/karine.png";
 import { Container } from "./styled";
 import { FiChevronRight } from "react-icons/fi";
 import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
@@ -13,9 +14,14 @@ import Footer from '../../Components/Footer';
 
 export default function Agendamentos() {
   const sectionButtonRef = useRef<HTMLHeadingElement>(null);
+  const [showMoreComments, setShowMoreComments] = useState(false);
 
   const handleButtonClick = () => {
     sectionButtonRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const toggleComments = () => {
+    setShowMoreComments((prevValue: boolean) => !prevValue);
   };
 
   return (
@@ -77,7 +83,7 @@ export default function Agendamentos() {
         <h2 className="title-2">Depoimentos</h2>
 
         <div className="container">                             
-          <div className="top-comments">
+          <div className={`top-comments ${showMoreComments ? 'show-all' : ''}`}>
             <div className="comment-box">
               <div className="profile-info">
                 <img src={rafaelBarbosa} className="profile-picture" />
@@ -116,74 +122,101 @@ export default function Agendamentos() {
               </p>
               <ImQuotesRight className="quote-icon-right" />
             </div>
-
-            <div className="comment-box right-box" id="junior-comment" >
-              <div className="profile-info">
-                <img src={juniorFydelles} className="profile-picture" />
-                <p>
-                  {" "}
-                  Junior <br /> Fydelles{" "}
-                </p>
-                <br />
-              </div>
-              <ImQuotesLeft className="quote-icon-left" />
-              <p className="comment">
-                Sabe aquele passeio que se torna mais agradável ainda pelo fato
-                dos profissionais serem extremamente compromissados com o que
-                fazem? Só temos elogios! Desde o primeiro contato com o Sr
-                Henrique, até o nosso motorista e guia Álvaro. Que dia
-                maravilhoso! Que energia contagiante! Sem dúvidas, tornou nosso
-                momento ainda mais especial. Quero parabenizar e registrar o
-                diferencial da empresa em proporcionar a seus clientes não só um
-                passeio, mas uma experiência marcante. Gratidão! Já estou
-                programando a próxima!
-              </p>
-              <ImQuotesRight className="quote-icon-right" />
-            </div>
           </div>
 
-          <div className="bottom-comments">
-            <div className="comment-box">
-              <div className="profile-info">
-                <img src={mauricioFelix} className="profile-picture" />
-                <p>
-                  {" "}
-                  Mauricio <br /> Felix{" "}
-                </p>
-                <br />
-              </div>
-              <ImQuotesLeft className="quote-icon-left" />
-              <p className="comment">
-                Compensou muito contratar o serviço do Henrique. Minha esposa e
-                eu não conhecíamos Campos do Jordão, por isso estávamos sem
-                saber pra onde ir. O nosso guia nos levou para os principais
-                pontos turísticos, tirou belas fotos, foi muito atencioso nas
-                explicações e conversou bastante com a gente. Tudo isso por um
-                preço justo.
-              </p>
-              <ImQuotesRight className="quote-icon-right" />
+          {!showMoreComments && (
+            <div className="show-more-comments">
+              <button className="show-more-button" onClick={toggleComments}>
+                LEIA MAIS
+              </button>
             </div>
+          )}
 
-            <div className="comment-box">
-              <div className="profile-info">
-                <img src={danielabrito} className="profile-picture" />
-                <p>
-                  {" "}
-                  Daniela <br /> Brito{" "}
+          {showMoreComments ? (
+            <div className={`middle-box ${showMoreComments ? 'show-all' : ''}`}>
+              <div className="comment-box">
+                <div className="profile-info">
+                  <img src={danielabrito} className="profile-picture" />
+                  <p>
+                    {" "}
+                    Daniela <br /> Brito{" "}
+                  </p>
+                  <br />
+                </div>
+                <ImQuotesLeft className="quote-icon-left" />
+                <p className="comment">
+                  O passeio com o Henrique foi maravilhoso. Eu e meu marido estamos em lua de mel e ele foi impecável com as fotos, com as informações dos locais e rendeu grandes risadas!
+                  Super indico! ☺️
                 </p>
-                <br />
+                <ImQuotesRight className="quote-icon-right" />
               </div>
-              <ImQuotesLeft className="quote-icon-left" />
-              <p className="comment">
-                O passeio com o Henrique foi maravilhoso. Eu e meu marido estamos em lua de mel e ele foi impecável com as fotos, com as informações dos locais e rendeu grandes risadas!
-                Super indico! ☺️
-              </p>
-              <ImQuotesRight className="quote-icon-right" />
+              
+              <div className="comment-box">
+                <div className="profile-info">
+                  <img src={mauricioFelix} className="profile-picture" />
+                  <p>
+                    {" "}
+                    Mauricio <br /> Felix{" "}
+                  </p>
+                  <br />
+                </div>
+                <ImQuotesLeft className="quote-icon-left" />
+                <p className="comment">
+                  Compensou muito contratar o serviço do Henrique. Minha esposa e
+                  eu não conhecíamos Campos do Jordão, por isso estávamos sem
+                  saber pra onde ir. O nosso guia nos levou para os principais
+                  pontos turísticos, tirou belas fotos, foi muito atencioso nas
+                  explicações e conversou bastante com a gente. Tudo isso por um
+                  preço justo.
+                </p>
+                <ImQuotesRight className="quote-icon-right" />
+              </div>
             </div>
+          ) : null}
 
-            <div className="comment-box right-box right-box-none" >
+          {showMoreComments ? (
+            <div className={`bottom-comments ${showMoreComments ? 'show-all' : ''}`}>
+              <div className="comment-box" id="junior-comment" >
+                <div className="profile-info">
+                  <img src={juniorFydelles} className="profile-picture" />
+                  <p>
+                    {" "}
+                    Junior <br /> Fydelles{" "}
+                  </p>
+                  <br />
+                </div>
+                <ImQuotesLeft className="quote-icon-left" />
+                <p className="comment">
+                  Sabe aquele passeio que se torna mais agradável ainda pelo fato
+                  dos profissionais serem extremamente compromissados com o que
+                  fazem? Só temos elogios! Desde o primeiro contato com o Sr
+                  Henrique, até o nosso motorista e guia Álvaro. Que dia
+                  maravilhoso! Que energia contagiante! Sem dúvidas, tornou nosso
+                  momento ainda mais especial. Quero parabenizar e registrar o
+                  diferencial da empresa em proporcionar a seus clientes não só um
+                  passeio, mas uma experiência marcante. Gratidão! Já estou
+                  programando a próxima!
+                </p>
+                <ImQuotesRight className="quote-icon-right" />
+              </div>
+
+              <div className="comment-box" >
+              <div className="profile-info">
+                  <img src={karine} className="profile-picture" />
+                  <p>
+                    {" "}
+                    Karine Santos<br />Soto{" "}
+                  </p>
+                  <br />
+                </div>
+                <ImQuotesLeft className="quote-icon-left" />
+                <p className="comment">
+                  Fizemos passeios com a SS em dois dias e simplesmente amamos. O Henrique nos deu todo suporte desde o primeiro contato e o Lucas tbm foi ótimo, conhecemos lugares lindos e tiraram fotos maravilhosas minhas e do meu namorado. Para quem não conhece Campos do Jordão ou conhece e acha  que a cidade é somente o centrinho de Capivari, fechem com a SS para conhecer Campos ou outras cidades próximas de verdade.
+                </p>
+                <ImQuotesRight className="quote-icon-right" />
+              </div>
             </div>
-          </div>
+          ) : null}
         </div>
       </Container>
       <Footer />

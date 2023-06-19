@@ -65,7 +65,7 @@ export const Container = styled.div`
     justify-content: center;
   }
 
-  .schedule {
+  .schedule, .show-more-button {
     font-size: 1vw;
     text-transform: uppercase;
     padding: 1% 3%;
@@ -78,7 +78,7 @@ export const Container = styled.div`
     text-decoration: none;
   }
 
-  .schedule:hover {
+  .schedule:hover, .show-more-button:hover {
     color: #ffcc29;
     background-color: rgba(255, 204, 41, 0.4);
   }
@@ -90,29 +90,40 @@ export const Container = styled.div`
 
   .container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    margin-top: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .top-comments {
     display: flex;
+    justify-content: center;
+  }
+
+  .middle-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
   }
 
   .bottom-comments {
     display: flex;
-    margin-top: -23vh;
+    justify-content: center;
+    margin-top: 20px;
   }
 
-  .right-box {
-    margin-top: 15vh;
+  .show-all {
+    flex-wrap: wrap;
+  }
+
+  .show-more-comments {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
   }
 
   .comment-box {
-    width: 20vw;
-    height: 40vh;
-    padding: 5% 2vw;
+    width: 35%;
+    margin-bottom: 20px;
   }
 
   .profile-info {
@@ -143,7 +154,7 @@ export const Container = styled.div`
   }
 
   .profile-picture {
-    width: 20%;
+    width: 10%;
     margin-right: 6%;
   }
 
@@ -151,7 +162,7 @@ export const Container = styled.div`
     font-size: 1.07vw;
   }
 
-  @media (max-width: 767px) {
+  /*@media (max-width: 767px) {
     h2 {
       font-size: 6.5vw;
     }
@@ -209,15 +220,15 @@ export const Container = styled.div`
 
     .quote-icon-left,
     .quote-icon-right {
-      font-size: 5vw;
-    }
-
-    .comment {
       font-size: 4vw;
     }
 
+    .comment {
+      font-size: 3vw;
+    }
+
     .comment-box {
-      width: 70vw;
+      width: 50vw;
       margin-right: 5vw;
       margin-left: 10vw;
       height: auto;
@@ -303,5 +314,6 @@ export const Container = styled.div`
       font-size: 3.5vw;
       font-weight: bold;
     }
-  }
+  }*/ 
+  
 `;
