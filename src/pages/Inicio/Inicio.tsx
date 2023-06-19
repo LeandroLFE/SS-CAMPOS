@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useEffect } from 'react';
 import campos_home from '../../assets/campos_home.png';
 import { Container } from './style';
 import Carousel1 from '../../Components/Main/first-carrossel';
@@ -18,6 +18,78 @@ import Footer from '../../Components/Footer';
 import { FiChevronRight } from 'react-icons/fi';
 
 export default function Inicio () {
+  useEffect(() => {
+    const handleAlertButtonClick = () => {
+      window.open('https://www.instagram.com/sspasseiosemcampos/', '_blank');
+    };
+
+    const closeAlert = () => {
+      const alertContainer = document.getElementById('custom-alert-container');
+      if (alertContainer) {
+        document.body.removeChild(alertContainer);
+      }
+    };
+
+    const showAlert = () => {
+      const alertContainer = document.createElement('div');
+      alertContainer.id = 'custom-alert-container';
+      alertContainer.style.position = 'fixed';
+      alertContainer.style.bottom = '0';
+      alertContainer.style.right = '0';
+      alertContainer.style.width = '100%';
+      alertContainer.style.zIndex = '9999';
+
+      const alertContent = document.createElement('div');
+      alertContent.style.background = 'linear-gradient(transparent, black)';
+      alertContent.style.padding = '20px';
+      alertContent.style.borderRadius = '5px';
+      alertContent.style.color = 'white';
+      alertContent.style.textAlign = 'center';
+
+      const message = document.createElement('p');
+      message.textContent = 'Visite nosso Instagram!';
+      message.style.marginBottom = '10px';
+
+      const closeButton = document.createElement('button');
+      closeButton.innerHTML = 'X';
+      closeButton.style.position = 'absolute';
+      closeButton.style.top = '10px';
+      closeButton.style.right = '10px';
+      closeButton.style.padding = '5px';
+      closeButton.style.background = 'transparent';
+      closeButton.style.color = 'white';
+      closeButton.style.border = 'none';
+      closeButton.style.borderRadius = '50%';
+      closeButton.style.cursor = 'pointer';
+      closeButton.style.fontWeight = 'bold';
+      closeButton.style.fontSize = '16px';
+
+      closeButton.addEventListener('click', closeAlert);
+
+      const button = document.createElement('button');
+      button.textContent = '@sspasseiosemcampos';
+      button.style.padding = '10px 20px';
+      button.style.background = 'linear-gradient(to right, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D)';
+      button.style.color = 'white';
+      button.style.border = 'none';
+      button.style.fontWeight = 'bold';
+      button.style.borderRadius = '50px';
+      button.style.cursor = 'pointer';
+      button.style.marginTop = '10px';
+
+      button.addEventListener('click', handleAlertButtonClick);
+
+      alertContent.appendChild(message);
+      alertContent.appendChild(button);
+      alertContent.appendChild(closeButton);
+      alertContainer.appendChild(alertContent);
+
+      document.body.appendChild(alertContainer);
+    };
+
+    showAlert();
+  }, []);
+
   const sectionButtonRef = useRef<HTMLHeadingElement>(null);
 
   const handleButtonClick = () => {
