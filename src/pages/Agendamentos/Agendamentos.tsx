@@ -71,12 +71,12 @@ export default function Agendamentos() {
         </div>
 
         <div className="button-schedule">
-          <button className="schedule">Agendar</button>
+          <a href="https://api.whatsapp.com/message/IJB2DRZOVPY5B1?autoload=1&app_absent=0" className="schedule" target="_blank">Agendar</a>
         </div>
 
         <h2 className="title-2">Depoimentos</h2>
 
-        <div className="container">
+        <div className="container">                             
           <div className="top-comments">
             <div className="comment-box">
               <div className="profile-info">
@@ -117,7 +117,7 @@ export default function Agendamentos() {
               <ImQuotesRight className="quote-icon-right" />
             </div>
 
-            <div className="comment-box right-box" >
+            <div className="comment-box right-box" id="junior-comment" >
               <div className="profile-info">
                 <img src={juniorFydelles} className="profile-picture" />
                 <p>

@@ -115,5 +115,43 @@ export const Container = styled.div`
         }
     }
 
+    @media (min-width: 768px) and (max-width: 1023px) {
+        .header {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            justify-content: space-between;
+        }
+        
+        .logo {
+            width: 25%;
+            margin: 3vw 5vw 3vw 3vw;
+        }
+
+        .icon {
+            margin-top: 1vw;
+            margin-right: 3vw;
+        }
+
+        .button {
+            font-size: 2.5vw;
+            margin-top: auto;
+            margin-bottom: auto;
+            align-self: center;
+        }
+
+        #button-1 {
+            margin-right: 5vw;
+        }
+
+        #button-2 {
+            margin-right: 5vw;
+        }
+
+        .social-link {
+            margin-right: -5vw;
+        }
+    }
+
 
 `;

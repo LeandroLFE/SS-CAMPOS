@@ -13,7 +13,7 @@ interface LinkProps {
 const CustomLink = styled(Link)<LinkProps>`
   color: ${(props) => (props.isActive ? "#FFCC29" : "white")};
   &:hover {
-    color: #FFCC29;
+    color: #ffcc29;
   }
 `;
 
@@ -26,7 +26,14 @@ interface ButtonProps {
   target?: string;
 }
 
-const Button: React.FC<ButtonProps> = ({ to, className, id, children, onClick, target }) => {
+const Button: React.FC<ButtonProps> = ({
+  to,
+  className,
+  id,
+  children,
+  onClick,
+  target,
+}) => {
   const active = useLocation().pathname === to;
 
   const handleClick = () => {
@@ -34,7 +41,14 @@ const Button: React.FC<ButtonProps> = ({ to, className, id, children, onClick, t
   };
 
   return (
-    <CustomLink to={to} className={className} id={id} isActive={active} target={target} onClick={handleClick}>
+    <CustomLink
+      to={to}
+      className={className}
+      id={id}
+      isActive={active}
+      target={target}
+      onClick={handleClick}
+    >
       {children}
     </CustomLink>
   );
@@ -50,57 +64,66 @@ const Header = () => {
   };
 
   const handleScrollToSobre = () => {
-    const title1Element = document.getElementById('title-1');
+    const title1Element = document.getElementById("title-1");
     if (title1Element) {
-      title1Element.scrollIntoView({ behavior: 'smooth' });
+      title1Element.scrollIntoView({ behavior: "smooth" });
     }
     setIsMenuOpen(false);
   };
 
   const handleScrollToRoadMap = () => {
-    const title1Element = document.getElementById('first-road-map');
+    const title1Element = document.getElementById("first-road-map");
     if (title1Element) {
-      title1Element.scrollIntoView({ behavior: 'smooth' });
+      title1Element.scrollIntoView({ behavior: "smooth" });
     }
     setIsMenuOpen(false);
   };
 
   const handleScrollToOtherServices = () => {
-    const title1Element = document.getElementById('other-services');
+    const title1Element = document.getElementById("other-services");
     if (title1Element) {
-      title1Element.scrollIntoView({ behavior: 'smooth' });
+      title1Element.scrollIntoView({ behavior: "smooth" });
     }
     setIsMenuOpen(false);
   };
 
   const handleScrollToServices = () => {
-    const title1Element = document.getElementById('services');
+    const title1Element = document.getElementById("services");
     if (title1Element) {
-      title1Element.scrollIntoView({ behavior: 'smooth' });
+      title1Element.scrollIntoView({ behavior: "smooth" });
     }
     setIsMenuOpen(false);
   };
 
   const handleScrollToDifferential = () => {
-    const title1Element = document.getElementById('differential');
+    const title1Element = document.getElementById("differential");
     if (title1Element) {
-      title1Element.scrollIntoView({ behavior: 'smooth' });
+      title1Element.scrollIntoView({ behavior: "smooth" });
     }
     setIsMenuOpen(false);
   };
 
   const handleContactButtonClick = () => {
-    window.open("https://api.whatsapp.com/message/IJB2DRZOVPY5B1?autoload=1&app_absent=0", "_blank");
+    window.open(
+      "https://api.whatsapp.com/message/IJB2DRZOVPY5B1?autoload=1&app_absent=0",
+      "_blank"
+    );
     setIsMenuOpen(false);
   };
 
   return (
     <Container>
       <div className="header">
-        <img src={logo} alt="logo SS PASSEIOS EM CAMPOS DO JORDÃO" className="logo" />
+        <img
+          src={logo}
+          alt="logo SS PASSEIOS EM CAMPOS DO JORDÃO"
+          className="logo"
+        />
         <Button
           to="/inicio"
-          className={`button ${location.pathname === "/inicio" ? "active" : ""}`}
+          className={`button ${
+            location.pathname === "/inicio" ? "active" : ""
+          }`}
           id="button-1"
         >
           Início
@@ -114,23 +137,35 @@ const Header = () => {
         >
           Agendamentos
         </Button>
-        {isMobileView ? (
-          <i className={`menu-icon ${isMenuOpen ? "open" : ""}`} onClick={handleMenuToggle} style={{ marginTop: "14px" }}>
+        {isMobileView && (location.pathname === "/inicio" || location.pathname === "/agendamentos") && (
+          <i
+            className={`menu-icon ${isMenuOpen ? "open" : ""}`}
+            onClick={handleMenuToggle}
+            style={{ marginTop: "14px" }}
+          >
             {isMenuOpen ? (
               <FaTimes size={20} color="#FFFFFF" />
             ) : (
               <FaEllipsisV size={20} color="#FFFFFF" />
             )}
           </i>
-        ) : (
+        )}
+
+        {!isMobileView && (
           <>
-            <a href="mailto:SSpasseiosemcampos@gmail.com" target="_blank" rel="noopener noreferrer">
+            <a
+              href="mailto:SSpasseiosemcampos@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-link"
+            >
               <GoMail className="icon" size={32} />
             </a>
             <a
               href="https://api.whatsapp.com/message/IJB2DRZOVPY5B1?autoload=1&app_absent=0"
               target="_blank"
               rel="noopener noreferrer"
+              className="social-link"
             >
               <FaWhatsapp className="icon" size={29} />
             </a>
@@ -144,25 +179,50 @@ const Header = () => {
           </>
         )}
 
+
         {isMenuOpen && isMobileView && (
           <div className={`menu ${isMenuOpen ? "open" : ""}`}>
             <div className="menu-item">
-              <Button to="/inicio" className="item" onClick={handleScrollToSobre}>
+              <Button
+                to="/inicio"
+                className="item"
+                onClick={handleScrollToSobre}
+              >
                 SOBRE
               </Button>
-              <Button to="/inicio" className="item" onClick={handleScrollToRoadMap}>
+              <Button
+                to="/inicio"
+                className="item"
+                onClick={handleScrollToRoadMap}
+              >
                 ROTEIROS
               </Button>
-              <Button to="/inicio" className="item" onClick={handleScrollToOtherServices}>
+              <Button
+                to="/inicio"
+                className="item"
+                onClick={handleScrollToOtherServices}
+              >
                 OUTROS ATENDIMENTOS
               </Button>
-              <Button to="/inicio" className="item" onClick={handleScrollToServices}>
+              <Button
+                to="/inicio"
+                className="item"
+                onClick={handleScrollToServices}
+              >
                 SERVIÇOS
               </Button>
-              <Button to="/inicio" className="item" onClick={handleScrollToDifferential}>
+              <Button
+                to="/inicio"
+                className="item"
+                onClick={handleScrollToDifferential}
+              >
                 DIFERENCIAL
               </Button>
-              <Button to="/inicio" className="item" onClick={handleContactButtonClick}>
+              <Button
+                to="/inicio"
+                className="item"
+                onClick={handleContactButtonClick}
+              >
                 CONTATO
               </Button>
             </div>
