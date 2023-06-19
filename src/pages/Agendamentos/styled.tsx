@@ -124,6 +124,8 @@ export const Container = styled.div`
   .comment-box {
     width: 35%;
     margin-bottom: 20px;
+    margin-right: 60px;
+    margin-left: 60px;
   }
 
   .profile-info {
