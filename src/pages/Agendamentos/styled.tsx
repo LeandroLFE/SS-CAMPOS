@@ -118,7 +118,7 @@ export const Container = styled.div`
   .show-more-comments {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    width: 100%;
   }
 
   .comment-box {
@@ -164,20 +164,20 @@ export const Container = styled.div`
     font-size: 1.07vw;
   }
 
-  /*@media (max-width: 767px) {
+  @media (max-width: 767px) {
     h2 {
       font-size: 6.5vw;
     }
 
     .principal-text {
       width: 80%;
-      top: 70%;
+      top: 62%;
       font-size: 7vw;
       line-height: 9vw;
     }
 
     .more-information {
-      top: 82%;
+      top: 75%;
       font-size: 3.5vw;
       padding: 2vw 4vw;
     }
@@ -199,25 +199,15 @@ export const Container = styled.div`
       justify-content: center;
     }
 
-    .schedule {
+    .schedule, .show-more-button {
       top: 80%;
       font-size: 3.5vw;
       padding: 2vw 4vw;
     }
 
-    .container {
-      flex-direction: initial;
-      height: auto;
-      overflow-y: scroll;
-    }
-
-    .top-comments,
-    .bottom-comments {
-      margin-top: 0;
-    }
-
-    .right-box {
-      margin-top: 0;
+    .top-comments {
+      flex-direction: column;
+      margin: 0 auto;
     }
 
     .quote-icon-left,
@@ -226,24 +216,25 @@ export const Container = styled.div`
     }
 
     .comment {
-      font-size: 3vw;
+      font-size: 4vw;
     }
 
     .comment-box {
-      width: 50vw;
+      width: 70vw;
       margin-right: 5vw;
       margin-left: 10vw;
       height: auto;
     }
 
-    .right-box-none {
-      display: none;
-    }
-
     .profile-info p {
-      font-size: 3.8vw;
+      font-size: 4vw;
       font-weight: bold;
     }
+
+    .profile-picture {
+      width: 18%;
+    }
+
   }
 
   @media (min-width: 768px) and (max-width: 1024px) {
@@ -316,6 +307,6 @@ export const Container = styled.div`
       font-size: 3.5vw;
       font-weight: bold;
     }
-  }*/ 
+  }
   
 `;

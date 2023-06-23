@@ -280,13 +280,13 @@ export const Container = styled.div`
 
     .principal-text {
       width: 80%;
-      top: 70%;
+      top: 62%;
       font-size: 7vw;
       line-height: 9vw;
     }
 
     .more-information {
-      top: 80%;
+      top: 75%;
       font-size: 3.5vw;
       padding: 2vw 4vw;
     }
