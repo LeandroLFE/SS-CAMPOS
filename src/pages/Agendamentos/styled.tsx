@@ -262,25 +262,15 @@ export const Container = styled.div`
       margin-left: 3%;
     }
 
-    .schedule {
+    .schedule, .show-more-button {
       font-size: 3vw;
       padding: 1.2% 3%;
       margin-top: 6%;
     }
 
-    .container {
-      flex-direction: initial;
-      height: auto;
-      overflow-y: scroll;
-    }
-
-    .top-comments,
-    .bottom-comments {
-      margin-top: 0;
-    }
-
-    .right-box {
-      margin-top: 0;
+    .top-comments {
+      flex-direction: column;
+      margin: 0 auto;
     }
 
     .quote-icon-left,
@@ -293,14 +283,11 @@ export const Container = styled.div`
     }
 
     .comment-box {
+      margin-top: 5vh;
       width: 70vw;
       margin-right: 5vw;
       margin-left: 10vw;
       height: auto;
-    }
-
-    .right-box-none {
-      display: none;
     }
 
     .profile-info p {
