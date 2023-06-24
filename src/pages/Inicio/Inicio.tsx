@@ -18,6 +18,20 @@ import Footer from '../../Components/Footer';
 import { FiChevronRight } from 'react-icons/fi';
 
 export default function Inicio () {
+  const topRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const scrollToTop = () => {
+      if (topRef.current) {
+        topRef.current.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
+
+    if (location.pathname === '/agendamentos' || location.pathname === '/inicio') {
+      scrollToTop();
+    }
+  }, []);
+
   useEffect(() => {
     const handleAlertButtonClick = () => {
       window.open('https://www.instagram.com/sspasseiosemcampos/', '_blank');
@@ -99,6 +113,7 @@ export default function Inicio () {
     return (
       <div>
         <Header />
+        <div ref={topRef} />
         <Container>
         <div className="top-main">
           <img src={campos_home} alt="Entrada de Campos do Jordão" className="campos_home"/>

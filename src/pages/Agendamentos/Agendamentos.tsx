@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import Header from "../../Components/Header";
 import campos_schedules from "../../assets/campus_schedules.png";
 import rafaelBarbosa from "../../assets/rafaelBarbosa.png";
@@ -13,6 +13,20 @@ import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
 import Footer from '../../Components/Footer';
 
 export default function Agendamentos() {
+  const topRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const scrollToTop = () => {
+      if (topRef.current) {
+        topRef.current.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
+
+    if (location.pathname === '/agendamentos' || location.pathname === '/inicio') {
+      scrollToTop();
+    }
+  }, []);
+
   const sectionButtonRef = useRef<HTMLHeadingElement>(null);
   const [showMoreComments, setShowMoreComments] = useState(false);
 
@@ -27,6 +41,7 @@ export default function Agendamentos() {
   return (
     <>
       <Header />
+      <div ref={topRef} />
       <Container>
         <img
           src={campos_schedules}
