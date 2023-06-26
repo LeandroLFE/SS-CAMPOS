@@ -16,9 +16,18 @@ import cameraProfissional from '../../assets/camera-profissional.png';
 import Header from '../../Components/Header'
 import Footer from '../../Components/Footer';
 import { FiChevronRight } from 'react-icons/fi';
+import { useLocation } from 'react-router-dom';
 
 export default function Inicio () {
   const topRef = useRef<HTMLDivElement>(null);
+  const location = useLocation()
+
+  const handleScrollTo = (idTo: string) => {
+    const title1Element = document.getElementById(idTo);
+    if (title1Element) {
+      title1Element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   useEffect(() => {
     const scrollToTop = () => {
@@ -29,6 +38,10 @@ export default function Inicio () {
 
     if (location.pathname === '/agendamentos' || location.pathname === '/inicio') {
       scrollToTop();
+    }
+
+    if(location.state?.idTo){
+      handleScrollTo(location.state.idTo)
     }
   }, []);
 

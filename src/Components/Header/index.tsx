@@ -17,6 +17,11 @@ const CustomLink = styled(Link)<LinkProps>`
   }
 `;
 
+
+interface stateProps{
+  idTo: string
+}
+
 interface ButtonProps {
   to: string;
   className?: string;
@@ -24,6 +29,7 @@ interface ButtonProps {
   children?: React.ReactNode;
   onClick?: () => void;
   target?: string;
+  state?: stateProps;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -33,6 +39,7 @@ const Button: React.FC<ButtonProps> = ({
   children,
   onClick,
   target,
+  state,
 }) => {
   const active = useLocation().pathname === to;
 
@@ -48,6 +55,7 @@ const Button: React.FC<ButtonProps> = ({
       isActive={active}
       target={target}
       onClick={handleClick}
+      state = {state}
     >
       {children}
     </CustomLink>
@@ -187,6 +195,7 @@ const Header = () => {
                 to="/inicio"
                 className="item"
                 onClick={handleScrollToSobre}
+                state={{idTo: "title-1"}}
               >
                 SOBRE
               </Button>
@@ -194,6 +203,7 @@ const Header = () => {
                 to="/inicio"
                 className="item"
                 onClick={handleScrollToRoadMap}
+                state={{idTo: "first-road-map"}}
               >
                 ROTEIROS
               </Button>
@@ -201,6 +211,7 @@ const Header = () => {
                 to="/inicio"
                 className="item"
                 onClick={handleScrollToOtherServices}
+                state={{idTo: "other-services"}}
               >
                 OUTROS ATENDIMENTOS
               </Button>
@@ -208,6 +219,7 @@ const Header = () => {
                 to="/inicio"
                 className="item"
                 onClick={handleScrollToServices}
+                state={{idTo: "services"}}
               >
                 SERVIÇOS
               </Button>
@@ -215,6 +227,7 @@ const Header = () => {
                 to="/inicio"
                 className="item"
                 onClick={handleScrollToDifferential}
+                state={{idTo: "differential"}}
               >
                 DIFERENCIAL
               </Button>
